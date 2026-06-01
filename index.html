@@ -263,22 +263,16 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
 .aud-cta:hover{gap:10px}
 @media(max-width:768px){.aud-tabs{flex-direction:column}.aud-panel-inner{grid-template-columns:1fr}.aud-highlights{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
 
-/* Hero Selector */
-.hero-selector{display:flex;gap:0;margin-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);width:fit-content}
-.hero-sel-btn{padding:10px 24px 12px;background:transparent;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,.4);font-family:var(--font);font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.02em;white-space:nowrap;margin-bottom:-1px}
-.hero-sel-btn:hover{color:rgba(255,255,255,.75)}
-.hero-sel-btn.active{color:var(--white);border-bottom-color:var(--green)}
-.hero-tab{animation:fadeUp .3s ease both}
+/* Hero audience links */
+.hero-audience-links{display:flex;align-items:center;gap:20px;margin-bottom:56px;flex-wrap:wrap}
+.hero-audience-links a{color:rgba(255,255,255,.55);font-size:.88rem;font-weight:600;text-decoration:none;transition:color .2s;letter-spacing:.01em}
+.hero-audience-links a:hover{color:var(--green)}
+.hero-aud-divider{width:1px;height:14px;background:rgba(255,255,255,.15)}
 
 /* Team avatar icons */
 .team-avatar-icon{width:76px;height:76px;border-radius:50%;margin:0 auto 22px;background:rgba(118,210,21,.08);border:2px solid rgba(118,210,21,.25);display:flex;align-items:center;justify-content:center}
 .team-since{font-size:.74rem;color:var(--green);font-weight:600;margin-top:12px;letter-spacing:.03em;opacity:.85}
 
-.hero-hl{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:8px}
-.hero-hl li{font-size:.85rem;color:rgba(255,255,255,.6);padding-left:18px;position:relative;line-height:1.5}
-.hero-hl li::before{content:'—';position:absolute;left:0;color:var(--green);font-weight:700}
-.hero-more{color:var(--green);font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.02em;transition:letter-spacing .2s}
-.hero-more:hover{letter-spacing:.06em}
 </style>
 </head>
 <body>
@@ -300,42 +294,13 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
   <div class="hero-inner">
     <div class="eyebrow" style="animation:fadeUp .5s ease both">Hausverwaltung neu gedacht</div>
     <h1>Digital wo möglich.<br><span class="accent">Persönlich</span> wo nötig.</h1>
-
-    <!-- Hero Audience Selector -->
-    <div class="hero-selector">
-      <button class="hero-sel-btn active" onclick="switchHero('eigentuemer',this)">Eigentümer & WEG</button>
-      <button class="hero-sel-btn" onclick="switchHero('hausverwaltung',this)">Hausverwaltungen</button>
-      <button class="hero-sel-btn" onclick="switchHero('nachfolge',this)">Nachfolge</button>
-    </div>
-
-    <div class="hero-tab" id="hero-eigentuemer">
-      <p class="hero-sub">Sie suchen eine Verwaltung, die wirklich erreichbar ist – und auch dann kommuniziert, wenn sich gerade nichts verändert hat.</p>
-      <ul class="hero-hl">
-        <li>Eigentümerportal mit Echtzeit-Status</li>
-        <li>85% aller Anfragen in unter 1 Stunde</li>
-        <li>Fester Ansprechpartner – kein Callcenter</li>
-      </ul>
-      <a href="diprom-eigentuemer.html" class="hero-more">Mehr erfahren →</a>
-    </div>
-
-    <div class="hero-tab" id="hero-hausverwaltung" style="display:none">
-      <p class="hero-sub">Ihr Backoffice bremst Ihr Wachstum. diprom liefert die komplette Betriebsinfrastruktur – von Abrechnungen über Kommunikation bis zu Checklisten.</p>
-      <ul class="hero-hl">
-        <li>Komplettes Backoffice – Sie wachsen, wir skalieren</li>
-        <li>KI-Automatisierung von Routineprozessen</li>
-        <li>Keine Lizenzkosten – alles inklusive</li>
-      </ul>
-      <a href="diprom-skalierung.html" class="hero-more">Mehr erfahren →</a>
-    </div>
-
-    <div class="hero-tab" id="hero-nachfolge" style="display:none">
-      <p class="hero-sub">Sie suchen einen verlässlichen Nachfolger für Ihre Hausverwaltung? diprom übernimmt Bestand und Kunden – professionell und wertschätzend.</p>
-      <ul class="hero-hl">
-        <li>Vertrauliche & strukturierte Übergabe</li>
-        <li>Bestandsschutz für Mieter und Eigentümer</li>
-        <li>Persönliche Begleitung bis zum Abschluss</li>
-      </ul>
-      <a href="diprom-nachfolge.html" class="hero-more">Mehr erfahren →</a>
+    <p class="hero-sub">diprom verbindet KI-gestützte Prozessautomatisierung mit echter persönlicher Betreuung – für Eigentümer, Hausverwaltungen und Nachfolgeregelungen.</p>
+    <div class="hero-audience-links">
+      <a href="diprom-eigentuemer.html">Eigentümer & WEG →</a>
+      <span class="hero-aud-divider"></span>
+      <a href="diprom-skalierung.html">Hausverwaltungen →</a>
+      <span class="hero-aud-divider"></span>
+      <a href="diprom-nachfolge.html">Nachfolge →</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -615,14 +580,6 @@ function showTab(id, btn) {
 }
 </script>
 
-<script>
-function switchHero(id, btn) {
-  document.querySelectorAll('.hero-sel-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.hero-tab').forEach(t => t.style.display = 'none');
-  btn.classList.add('active');
-  document.getElementById('hero-' + id).style.display = 'block';
-}
-</script>
 
 </body>
 </html>
