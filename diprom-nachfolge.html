@@ -264,6 +264,12 @@ footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.12);
   .cta-inner{padding:40px 24px}
   .cta-box{min-width:unset}
 }
+
+/* Active nav */
+.nav-links a.nav-active{color:var(--green)!important;background:rgba(118,210,21,.08);border-radius:6px}
+/* Page max-width */
+body{max-width:1600px;margin-left:auto;margin-right:auto}
+nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
 </style>
 </head>
 <body>
@@ -576,6 +582,27 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 function toggleFaq(q) { q.parentElement.classList.toggle('open'); }
+</script>
+
+<script>
+// Active nav highlighting via IntersectionObserver
+(function(){
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  if(!links.length) return;
+  const ids = [...links].map(a => a.getAttribute('href').slice(1));
+  const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+  if(!sections.length) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        links.forEach(a => a.classList.remove('nav-active'));
+        const active = document.querySelector('.nav-links a[href="#'+entry.target.id+'"]');
+        if(active) active.classList.add('nav-active');
+      }
+    });
+  }, {rootMargin: '-20% 0px -60% 0px', threshold: 0});
+  sections.forEach(s => observer.observe(s));
+})();
 </script>
 </body>
 </html>
