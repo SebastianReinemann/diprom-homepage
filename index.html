@@ -264,12 +264,10 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
 @media(max-width:768px){.aud-tabs{flex-direction:column}.aud-panel-inner{grid-template-columns:1fr}.aud-highlights{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
 
 /* Hero Selector */
-.hero-selector{display:flex;gap:3px;margin-bottom:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px;width:fit-content}
-.hero-sel-btn{padding:10px 20px;background:transparent;border:none;color:rgba(255,255,255,.55);font-family:var(--font);font-size:.82rem;font-weight:600;cursor:pointer;border-radius:4px;transition:all .2s;letter-spacing:.02em;white-space:nowrap}
-.hero-sel-btn:hover{color:rgba(255,255,255,.85)}
-.hero-sel-btn.active{background:var(--green);color:var(--black)}
-.hero-highlights{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
-.hero-highlights span{background:rgba(118,210,21,.08);border:1px solid rgba(118,210,21,.2);color:rgba(255,255,255,.8);font-size:.78rem;font-weight:500;padding:6px 12px;border-radius:4px}
+.hero-selector{display:flex;gap:0;margin-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);width:fit-content}
+.hero-sel-btn{padding:10px 24px 12px;background:transparent;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,.4);font-family:var(--font);font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.02em;white-space:nowrap;margin-bottom:-1px}
+.hero-sel-btn:hover{color:rgba(255,255,255,.75)}
+.hero-sel-btn.active{color:var(--white);border-bottom-color:var(--green)}
 .hero-tab{animation:fadeUp .3s ease both}
 
 /* Team avatar icons */
@@ -300,47 +298,23 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
     <!-- Hero Audience Selector -->
     <div class="hero-selector">
       <button class="hero-sel-btn active" onclick="switchHero('eigentuemer',this)">Eigentümer & WEG</button>
-      <button class="hero-sel-btn" onclick="switchHero('hausverwaltung',this)">Für Hausverwaltungen</button>
+      <button class="hero-sel-btn" onclick="switchHero('hausverwaltung',this)">Hausverwaltungen</button>
       <button class="hero-sel-btn" onclick="switchHero('nachfolge',this)">Nachfolge</button>
     </div>
 
     <div class="hero-tab" id="hero-eigentuemer">
-      <div class="hero-highlights">
-        <span>✓ Eigentümerportal & Echtzeit-Status</span>
-        <span>✓ 85% Anfragen in unter 1 Stunde</span>
-        <span>✓ Fester Ansprechpartner – kein Callcenter</span>
-      </div>
       <p class="hero-sub">Sie suchen eine Verwaltung, die wirklich erreichbar ist – und auch dann kommuniziert, wenn sich gerade nichts verändert hat.</p>
-      <div class="hero-actions">
-        <a href="diprom-eigentuemer.html" class="btn-primary">Mehr erfahren</a>
-        <a href="diprom-kontakt.html" class="btn-ghost">Erstgespräch anfragen</a>
-      </div>
+      <a href="diprom-eigentuemer.html" class="btn-primary">Mehr erfahren</a>
     </div>
 
     <div class="hero-tab" id="hero-hausverwaltung" style="display:none">
-      <div class="hero-highlights">
-        <span>✓ Komplettes Backoffice – Sie wachsen, wir skalieren</span>
-        <span>✓ KI-Automatisierung von Routineprozessen</span>
-        <span>✓ Keine Lizenzkosten – alles inklusive</span>
-      </div>
       <p class="hero-sub">Ihr Backoffice bremst Ihr Wachstum. diprom liefert die komplette Betriebsinfrastruktur – von Abrechnungen über Kommunikation bis zu Checklisten.</p>
-      <div class="hero-actions">
-        <a href="diprom-skalierung.html" class="btn-primary">Mehr erfahren</a>
-        <a href="diprom-kontakt.html" class="btn-ghost">Strategiegespräch anfragen</a>
-      </div>
+      <a href="diprom-skalierung.html" class="btn-primary">Mehr erfahren</a>
     </div>
 
     <div class="hero-tab" id="hero-nachfolge" style="display:none">
-      <div class="hero-highlights">
-        <span>✓ Vertrauliche & strukturierte Übergabe</span>
-        <span>✓ Bestandsschutz für Mieter und Eigentümer</span>
-        <span>✓ Persönliche Begleitung bis zum Abschluss</span>
-      </div>
       <p class="hero-sub">Sie suchen einen verlässlichen Nachfolger für Ihre Hausverwaltung? diprom übernimmt Bestand und Kunden – professionell und wertschätzend.</p>
-      <div class="hero-actions">
-        <a href="diprom-nachfolge.html" class="btn-primary">Mehr erfahren</a>
-        <a href="diprom-kontakt.html" class="btn-ghost">Vertrauliches Gespräch anfragen</a>
-      </div>
+      <a href="diprom-nachfolge.html" class="btn-primary">Mehr erfahren</a>
     </div>
     <div class="hero-stats">
       <div>
