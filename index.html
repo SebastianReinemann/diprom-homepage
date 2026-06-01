@@ -273,6 +273,12 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
 /* Team avatar icons */
 .team-avatar-icon{width:76px;height:76px;border-radius:50%;margin:0 auto 22px;background:rgba(118,210,21,.08);border:2px solid rgba(118,210,21,.25);display:flex;align-items:center;justify-content:center}
 .team-since{font-size:.74rem;color:var(--green);font-weight:600;margin-top:12px;letter-spacing:.03em;opacity:.85}
+
+.hero-hl{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:8px}
+.hero-hl li{font-size:.85rem;color:rgba(255,255,255,.6);padding-left:18px;position:relative;line-height:1.5}
+.hero-hl li::before{content:'—';position:absolute;left:0;color:var(--green);font-weight:700}
+.hero-more{color:var(--green);font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.02em;transition:letter-spacing .2s}
+.hero-more:hover{letter-spacing:.06em}
 </style>
 </head>
 <body>
@@ -304,17 +310,32 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
 
     <div class="hero-tab" id="hero-eigentuemer">
       <p class="hero-sub">Sie suchen eine Verwaltung, die wirklich erreichbar ist – und auch dann kommuniziert, wenn sich gerade nichts verändert hat.</p>
-      <a href="diprom-eigentuemer.html" class="btn-primary">Mehr erfahren</a>
+      <ul class="hero-hl">
+        <li>Eigentümerportal mit Echtzeit-Status</li>
+        <li>85% aller Anfragen in unter 1 Stunde</li>
+        <li>Fester Ansprechpartner – kein Callcenter</li>
+      </ul>
+      <a href="diprom-eigentuemer.html" class="hero-more">Mehr erfahren →</a>
     </div>
 
     <div class="hero-tab" id="hero-hausverwaltung" style="display:none">
       <p class="hero-sub">Ihr Backoffice bremst Ihr Wachstum. diprom liefert die komplette Betriebsinfrastruktur – von Abrechnungen über Kommunikation bis zu Checklisten.</p>
-      <a href="diprom-skalierung.html" class="btn-primary">Mehr erfahren</a>
+      <ul class="hero-hl">
+        <li>Komplettes Backoffice – Sie wachsen, wir skalieren</li>
+        <li>KI-Automatisierung von Routineprozessen</li>
+        <li>Keine Lizenzkosten – alles inklusive</li>
+      </ul>
+      <a href="diprom-skalierung.html" class="hero-more">Mehr erfahren →</a>
     </div>
 
     <div class="hero-tab" id="hero-nachfolge" style="display:none">
       <p class="hero-sub">Sie suchen einen verlässlichen Nachfolger für Ihre Hausverwaltung? diprom übernimmt Bestand und Kunden – professionell und wertschätzend.</p>
-      <a href="diprom-nachfolge.html" class="btn-primary">Mehr erfahren</a>
+      <ul class="hero-hl">
+        <li>Vertrauliche & strukturierte Übergabe</li>
+        <li>Bestandsschutz für Mieter und Eigentümer</li>
+        <li>Persönliche Begleitung bis zum Abschluss</li>
+      </ul>
+      <a href="diprom-nachfolge.html" class="hero-more">Mehr erfahren →</a>
     </div>
     <div class="hero-stats">
       <div>
