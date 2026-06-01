@@ -270,6 +270,24 @@ footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.12);
 /* Page max-width */
 body{max-width:1600px;margin-left:auto;margin-right:auto}
 nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
+
+/* ── TEAM ── */
+.team{background:var(--black-deep);padding:100px 60px}
+.team-head{text-align:center;max-width:540px;margin:0 auto 60px}
+.team-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;color:var(--white);letter-spacing:-.02em;line-height:1.1;margin-bottom:14px}
+.team-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;max-width:1200px;margin:0 auto}
+.team-card{background:var(--black-mid);border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;justify-content:space-between;transition:all .3s;overflow:hidden}
+.team-card:hover{border-color:rgba(118,210,21,.2)}
+.team-card-top{padding:36px 32px 28px}
+.team-name{font-family:var(--serif);font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:4px;letter-spacing:-.02em}
+.team-role{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:18px;font-weight:400}
+.team-desc{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.7;font-weight:400}
+.team-photo-bottom{height:220px;overflow:hidden;padding:0 32px 32px}
+.team-photo-bottom img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:3px}
+.team-photo-empty{height:220px;background:rgba(0,0,0,.25)}
+@media(max-width:1024px){.team-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.team{padding:70px 20px}.team-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -297,7 +315,7 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
       <p class="hero-sub">Sie haben Jahre in Ihre Hausverwaltung investiert. Wenn der Moment kommt, den nächsten Schritt zu gehen, verdienen Sie einen Nachfolger, dem Sie wirklich vertrauen können – und der Ihre Kunden ebenso gut behandelt wie Sie.</p>
       <div class="hero-actions">
         <a href="diprom-kontakt.html" class="btn-primary">Vertrauliches Gespräch anfragen</a>
-        <a href="#prozess" class="btn-ghost">Wie läuft die Übergabe ab?</a>
+        
       </div>
     </div>
     <div class="trust-box">
