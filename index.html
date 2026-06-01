@@ -244,6 +244,24 @@ footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.12);
 /* Page max-width */
 body{max-width:1600px;margin-left:auto;margin-right:auto}
 nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
+
+/* Audience Tabs */
+.aud-tabs{display:flex;gap:3px;max-width:900px;margin:0 auto 3px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:4px}
+.aud-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;background:transparent;border:none;color:rgba(255,255,255,.55);font-family:var(--font);font-size:.88rem;font-weight:600;cursor:pointer;border-radius:4px;transition:all .25s;letter-spacing:.01em}
+.aud-tab:hover{color:rgba(255,255,255,.85);background:rgba(255,255,255,.04)}
+.aud-tab.active{background:var(--green);color:var(--black)}
+.aud-tab-icon{display:inline-flex;align-items:center}
+.aud-panel{display:none;max-width:900px;margin:0 auto}
+.aud-panel.active{display:block;animation:fadeUp .35s ease both}
+.aud-panel-inner{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;overflow:hidden}
+.aud-highlights{padding:36px;display:flex;flex-direction:column;gap:14px;border-right:1px solid rgba(255,255,255,.07)}
+.aud-highlight{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5}
+.aud-highlight span{color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
+.aud-content{padding:36px;display:flex;flex-direction:column;justify-content:space-between}
+.aud-text{font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:28px}
+.aud-cta{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.02em;transition:gap .2s}
+.aud-cta:hover{gap:10px}
+@media(max-width:768px){.aud-tabs{flex-direction:column}.aud-panel-inner{grid-template-columns:1fr}.aud-highlights{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
 </style>
 </head>
 <body>
@@ -289,31 +307,73 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
   </div>
 </section>
 
-<!-- AUDIENCE -->
+<!-- AUDIENCE TABS -->
 <section class="audience">
   <div class="audience-head reveal">
     <div class="eyebrow center">Für wen ist diprom?</div>
     <h2>Drei Zielgruppen.<br>Eine Plattform.</h2>
     <p>diprom löst die konkreten Probleme von Eigentümern, wachsenden Verwaltungen und Unternehmern auf der Suche nach einem Nachfolger.</p>
   </div>
-  <div class="audience-grid">
-    <div class="audience-card reveal" onclick="location.href='diprom-eigentuemer.html'" style="cursor:pointer">
-      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/><path d="M3 12v9h18V12"/></svg></span></div>
-      <div class="audience-title">Eigentümer & WEG</div>
-      <p class="audience-text">Sie suchen eine Verwaltung, die wirklich erreichbar ist – und auch dann kommuniziert, wenn sich gerade nichts verändert hat.</p>
-      <div class="audience-link">Mehr erfahren →</div>
+
+  <!-- Tab Buttons -->
+  <div class="aud-tabs">
+    <button class="aud-tab active" onclick="showTab('eigentuemer',this)">
+      <span class="aud-tab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/><path d="M3 12v9h18V12"/></svg></span>
+      Eigentümer & WEG
+    </button>
+    <button class="aud-tab" onclick="showTab('hausverwaltung',this)">
+      <span class="aud-tab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
+      Für Hausverwaltungen
+    </button>
+    <button class="aud-tab" onclick="showTab('nachfolge',this)">
+      <span class="aud-tab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l8.42 8.42 8.42-8.42a5.4 5.4 0 0 0 0-7.65z"/></svg></span>
+      Nachfolge
+    </button>
+  </div>
+
+  <!-- Tab Panels -->
+  <div class="aud-panel active" id="tab-eigentuemer">
+    <div class="aud-panel-inner">
+      <div class="aud-highlights">
+        <div class="aud-highlight"><span>✓</span> Eigentümerportal mit Echtzeit-Status</div>
+        <div class="aud-highlight"><span>✓</span> 85% aller Anfragen in unter 1 Stunde beantwortet</div>
+        <div class="aud-highlight"><span>✓</span> Transparente Abrechnung ohne Überraschungen</div>
+        <div class="aud-highlight"><span>✓</span> Feste Ansprechpartner – kein Callcenter</div>
+      </div>
+      <div class="aud-content">
+        <p class="aud-text">Sie suchen eine Verwaltung, die wirklich erreichbar ist – und auch dann kommuniziert, wenn sich gerade nichts verändert hat. diprom verbindet digitale Transparenz mit persönlicher Betreuung.</p>
+        <a href="diprom-eigentuemer.html" class="aud-cta">Mehr erfahren →</a>
+      </div>
     </div>
-    <div class="audience-card featured reveal d1" onclick="location.href='diprom-skalierung.html'" style="cursor:pointer">
-      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span></div>
-      <div class="audience-title">Hausverwaltungen</div>
-      <p class="audience-text">Ihr Backoffice bremst Ihr Wachstum. diprom liefert die komplette Betriebsinfrastruktur – Sie wachsen, wir skalieren mit.</p>
-      <div class="audience-link">Mehr erfahren →</div>
+  </div>
+
+  <div class="aud-panel" id="tab-hausverwaltung">
+    <div class="aud-panel-inner">
+      <div class="aud-highlights">
+        <div class="aud-highlight"><span>✓</span> Komplettes Backoffice – Sie fokussieren sich aufs Wachstum</div>
+        <div class="aud-highlight"><span>✓</span> KI-gestützte Automatisierung von Routineprozessen</div>
+        <div class="aud-highlight"><span>✓</span> Skalierung ohne proportionalen Personalaufbau</div>
+        <div class="aud-highlight"><span>✓</span> Keine Lizenzkosten – alles inklusive</div>
+      </div>
+      <div class="aud-content">
+        <p class="aud-text">Ihr Backoffice bremst Ihr Wachstum. diprom liefert die komplette Betriebsinfrastruktur – von Abrechnungen über Kommunikation bis zu Checklisten. Sie wachsen, wir skalieren mit.</p>
+        <a href="diprom-skalierung.html" class="aud-cta">Mehr erfahren →</a>
+      </div>
     </div>
-    <div class="audience-card reveal d2" onclick="location.href='diprom-nachfolge.html'" style="cursor:pointer">
-      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l8.42 8.42 8.42-8.42a5.4 5.4 0 0 0 0-7.65z"/></svg></span></div>
-      <div class="audience-title">Nachfolge</div>
-      <p class="audience-text">Sie suchen einen verlässlichen Nachfolger für Ihre Hausverwaltung? diprom übernimmt Bestand und Kunden – professionell und wertschätzend.</p>
-      <div class="audience-link">Gespräch anfragen →</div>
+  </div>
+
+  <div class="aud-panel" id="tab-nachfolge">
+    <div class="aud-panel-inner">
+      <div class="aud-highlights">
+        <div class="aud-highlight"><span>✓</span> Vertrauliche und strukturierte Übergabe</div>
+        <div class="aud-highlight"><span>✓</span> Bestandsschutz für Mieter und Eigentümer</div>
+        <div class="aud-highlight"><span>✓</span> Faire Bewertung und transparenter Prozess</div>
+        <div class="aud-highlight"><span>✓</span> Persönliche Begleitung bis zum Abschluss</div>
+      </div>
+      <div class="aud-content">
+        <p class="aud-text">Sie suchen einen verlässlichen Nachfolger für Ihre Hausverwaltung? diprom übernimmt Bestand und Kunden – professionell, wertschätzend und ohne Bruch für Ihre Mieter.</p>
+        <a href="diprom-nachfolge.html" class="aud-cta">Mehr erfahren →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -485,6 +545,15 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   }, {rootMargin: '-20% 0px -60% 0px', threshold: 0});
   sections.forEach(s => observer.observe(s));
 })();
+</script>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.aud-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.aud-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + id).classList.add('active');
+}
 </script>
 </body>
 </html>
