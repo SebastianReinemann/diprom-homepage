@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- SEO -->
+  <title>Nachfolge Hausverwaltung – Ihr Lebenswerk in guten Händen | diprom</title>
+  <meta name="description" content="diprom übernimmt Ihre Hausverwaltung – fair bewertet, nahtlos übergeben, Ihr Team wird mitgenommen. Vertrauliches Erstgespräch jederzeit möglich.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.diprom.io/nachfolge">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.diprom.io/nachfolge">
+  <meta property="og:title" content="Nachfolge für Hausverwaltungen | diprom">
+  <meta property="og:description" content="Kein Nachfolger in der Familie? diprom übernimmt Ihren Bestand fair, diskret und ohne Qualitätsbruch.">
+  <meta property="og:image" content="https://www.diprom.io/og-image.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="diprom GmbH">
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nachfolge für Hausverwaltungen | diprom">
+  <meta name="twitter:description" content="Kein Nachfolger in der Familie? diprom übernimmt Ihren Bestand fair, diskret und ohne Qualitätsbruch.">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.diprom.io",
+  "name": "diprom GmbH",
+  "description": "Moderne Hausverwaltung – digital wo möglich, persönlich wo nötig.",
+  "url": "https://www.diprom.io",
+  "telephone": "",
+  "email": "kontakt@diprom.io",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Reichweinstraße 20",
+    "addressLocality": "Moers",
+    "postalCode": "47441",
+    "addressCountry": "DE"
+  },
+  "founder": {"@type": "Person", "name": "Sebastian Reinemann"},
+  "areaServed": "DE",
+  "serviceType": ["Hausverwaltung", "WEG-Verwaltung", "Immobilienverwaltung"],
+  "slogan": "Digital wo möglich. Persönlich wo nötig."
+}</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#1A1A1A;--black-deep:#0B0F14;--black-mid:#1C222B;
+  --green:#76D215;--neon:#C7FE0B;
+  --white:#FFFFFF;--grey-light:#F5F7FA;--grey-700:#374151;--grey-500:#6B7280;
+  --serif:'Syne',sans-serif;--font:'Montserrat',system-ui,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--black-deep);color:var(--white);overflow-x:hidden}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes gridShift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+@keyframes glowPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(11,15,20,.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(118,210,21,.15)}
+.nav-logo{font-family:var(--serif);font-size:1.5rem;font-weight:800;
+  color:var(--white);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green)!important;color:var(--black)!important;padding:9px 22px;border-radius:3px;font-weight:700!important}
+.nav-cta:hover{background:var(--neon)!important}
+
+/* BUTTONS */
+.btn-primary{display:inline-block;background:var(--green);color:var(--black);
+  padding:14px 28px;font-family:var(--font);font-size:.9rem;font-weight:700;
+  border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-primary:hover{background:var(--neon);transform:translateY(-2px);box-shadow:0 8px 24px rgba(118,210,21,.3)}
+.btn-ghost{display:inline-block;background:transparent;color:rgba(255,255,255,.75);
+  padding:14px 28px;font-family:var(--font);font-size:.9rem;font-weight:500;
+  border:1px solid rgba(255,255,255,.25);border-radius:3px;text-decoration:none;transition:all .2s}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+
+/* EYEBROW */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;
+  font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--green)}
+.eyebrow.center{justify-content:center}
+
+/* HERO */
+.hero{background:var(--black-deep);padding:140px 60px 100px;position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(118,210,21,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(118,210,21,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none;animation:gridShift 24s linear infinite}
+.hero-glow{position:absolute;top:-150px;right:-150px;width:700px;height:700px;
+  background:radial-gradient(circle,rgba(118,210,21,.07) 0%,transparent 65%);
+  pointer-events:none;animation:glowPulse 7s ease-in-out infinite}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;width:100%}
+.hero-breadcrumb{font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.hero-breadcrumb a{color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.hero-breadcrumb a:hover{color:var(--green)}
+.hero h1{font-family:var(--serif);font-size:clamp(2rem,3.2vw,3.2rem);font-weight:800;
+  line-height:1.06;letter-spacing:-.03em;color:var(--white);margin-bottom:22px;
+  animation:fadeUp .6s .1s ease both}
+.accent{color:var(--green)}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.8;font-weight:400;margin-bottom:36px;animation:fadeUp .6s .2s ease both}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+
+/* HERO RIGHT – VERTRAUEN BOX */
+.trust-box{background:var(--black-mid);border:1px solid rgba(118,210,21,.18);border-radius:6px;padding:40px;position:relative;overflow:hidden;animation:fadeUp .6s .25s ease both}
+.trust-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--neon),transparent)}
+.trust-box-title{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+.trust-item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.trust-item:last-child{border-bottom:none;padding-bottom:0}
+.trust-check{width:22px;height:22px;border-radius:50%;background:rgba(118,210,21,.15);border:1.5px solid rgba(118,210,21,.4);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:.7rem;color:var(--green);font-weight:900}
+.trust-label{font-size:.9rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.trust-text{font-size:.83rem;color:rgba(255,255,255,.6);line-height:1.55}
+
+/* PAIN */
+.pain{background:var(--white);padding:100px 60px}
+.pain-head{text-align:center;max-width:600px;margin:0 auto 64px}
+.pain-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;color:var(--black);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.pain-head p{font-size:.95rem;color:var(--grey-700);line-height:1.8}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;max-width:1200px;margin:0 auto}
+.pain-card{background:var(--grey-light);border:1px solid rgba(0,0,0,.06);padding:40px 32px;position:relative;overflow:hidden;transition:all .3s}
+.pain-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--neon));transform:scaleX(0);transition:transform .4s}
+.pain-card:hover::after{transform:scaleX(1)}
+.pain-icon{font-size:2rem;margin-bottom:20px}
+.pain-title{font-size:1rem;font-weight:700;color:var(--black);margin-bottom:12px}
+.pain-text{font-size:.88rem;color:var(--grey-700);line-height:1.75}
+.pain-quote{margin-top:18px;padding:14px 16px;background:rgba(0,0,0,.04);border-left:3px solid rgba(118,210,21,.5);
+  font-size:.83rem;color:var(--grey-500);line-height:1.6;font-style:italic}
+
+/* PROMISE */
+.promise{background:var(--black-mid);padding:100px 60px}
+.promise-head{text-align:center;max-width:600px;margin:0 auto 64px}
+.promise-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;color:var(--white);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.promise-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8}
+.promise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;max-width:1100px;margin:0 auto}
+.promise-card{background:var(--black-deep);border:1px solid rgba(255,255,255,.06);padding:44px 40px;display:flex;gap:24px;align-items:flex-start;transition:all .3s}
+.promise-card:hover{border-color:rgba(118,210,21,.25);transform:translateY(-3px)}
+.promise-num{font-family:var(--serif);font-size:3rem;font-weight:800;color:rgba(118,210,21,.15);line-height:1;flex-shrink:0;transition:color .3s}
+.promise-card:hover .promise-num{color:rgba(118,210,21,.35)}
+.promise-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:10px}
+.promise-text{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.75}
+.promise-tag{margin-top:14px;display:inline-flex;align-items:center;gap:6px;
+  background:rgba(118,210,21,.1);border:1px solid rgba(118,210,21,.2);
+  padding:5px 12px;border-radius:3px;font-size:.78rem;font-weight:600;color:var(--green)}
+
+/* PROCESS */
+.process{background:var(--grey-light);padding:100px 60px}
+.process-head{text-align:center;max-width:600px;margin:0 auto 70px}
+.process-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;color:var(--black);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.process-head p{font-size:.95rem;color:var(--grey-700);line-height:1.8}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:1200px;margin:0 auto;position:relative}
+.process-step{text-align:center;padding:0 16px;position:relative}
+.process-step::after{content:'→';position:absolute;top:28px;right:-12px;font-size:1.2rem;color:rgba(118,210,21,.5);z-index:1}
+.process-step:last-child::after{display:none}
+.process-circle{width:60px;height:60px;border-radius:50%;background:var(--white);border:2px solid rgba(118,210,21,.35);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;
+  font-family:var(--serif);font-size:1.1rem;font-weight:800;color:var(--green);
+  box-shadow:0 4px 16px rgba(0,0,0,.06);transition:all .3s;position:relative;z-index:2}
+.process-step:hover .process-circle{border-color:var(--green);box-shadow:0 0 20px rgba(118,210,21,.25);background:rgba(118,210,21,.06)}
+.process-time{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.process-title{font-size:.9rem;font-weight:700;color:var(--black);margin-bottom:8px}
+.process-text{font-size:.83rem;color:var(--grey-700);line-height:1.65}
+
+/* PERSPECTIVE SPLIT */
+.split{background:var(--black-deep);padding:100px 60px}
+.split-head{text-align:center;max-width:600px;margin:0 auto 64px}
+.split-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;color:var(--white);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.split-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:1100px;margin:0 auto}
+.split-col{background:var(--black-mid);border:1px solid rgba(255,255,255,.06);padding:52px 44px;position:relative;overflow:hidden}
+.split-col.seller{border-top:2px solid var(--green)}
+.split-col.diprom{border-top:2px solid var(--neon)}
+.split-col-label{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}
+.split-col.seller .split-col-label{color:var(--green)}
+.split-col.diprom .split-col-label{color:var(--neon)}
+.split-col-title{font-family:var(--serif);font-size:1.3rem;font-weight:800;color:var(--white);margin-bottom:24px;line-height:1.2}
+.split-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.split-list li{display:flex;align-items:flex-start;gap:12px;font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.6}
+.split-list li::before{content:'✓';color:var(--green);font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:1px}
+.split-col.diprom .split-list li::before{color:var(--neon)}
+
+/* FAQ */
+.faq{background:var(--white);padding:100px 60px}
+.faq-head{text-align:center;max-width:600px;margin:0 auto 60px}
+.faq-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;color:var(--black);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.faq-head p{font-size:.95rem;color:var(--grey-700);line-height:1.8}
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(0,0,0,.09)}
+.faq-item.open .faq-q-text{color:var(--green)}
+.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--green);color:var(--green)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;cursor:pointer}
+.faq-q-text{font-size:.95rem;font-weight:600;color:var(--black);line-height:1.4;transition:color .2s}
+.faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(0,0,0,.2);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+  color:var(--grey-500);flex-shrink:0;transition:all .3s;line-height:1}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-body{max-height:400px}
+.faq-answer{padding:0 0 22px;font-size:.9rem;color:var(--grey-700);line-height:1.8}
+
+/* QUOTE */
+.quote-section{background:var(--green);padding:72px 60px;position:relative;overflow:hidden}
+.quote-section::before{content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(0,0,0,.03) 20px,rgba(0,0,0,.03) 21px)}
+.quote-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.quote-photo{width:56px;height:56px;border-radius:50%;overflow:hidden;border:2px solid rgba(0,0,0,.15);flex-shrink:0}
+.quote-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.quote-text{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.6rem);font-weight:700;color:var(--black);line-height:1.35;margin-bottom:10px}
+.quote-author{font-size:.88rem;color:rgba(0,0,0,.55);font-weight:500}
+
+/* CTA */
+.cta-section{background:var(--black-mid);padding:100px 60px}
+.cta-inner{background:var(--black-deep);border:1px solid rgba(118,210,21,.15);border-radius:6px;
+  padding:80px;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;
+  position:relative;overflow:hidden;max-width:1100px;margin:0 auto}
+.cta-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--green),var(--neon),transparent)}
+.cta-title{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:800;
+  color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:18px}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:460px}
+.cta-box{display:flex;flex-direction:column;gap:12px;flex-shrink:0;min-width:220px;text-align:center}
+.cta-note{font-size:.8rem;color:rgba(255,255,255,.45)}
+
+/* FOOTER */
+footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.12);
+  padding:44px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo{font-family:var(--serif);font-size:1.3rem;font-weight:800;color:var(--white);letter-spacing:-.02em;text-decoration:none}
+.footer-logo span{color:var(--green)}
+.footer-claim{font-size:.8rem;color:rgba(255,255,255,.45);letter-spacing:.06em;margin-top:5px}
+.footer-links{display:flex;gap:28px;list-style:none}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:.82rem;color:rgba(255,255,255,.4)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .pain-grid{grid-template-columns:1fr 1fr}
+  .promise-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:24px}
+  .process-step::after{display:none}
+  .split-grid{grid-template-columns:1fr}
+  .cta-inner{grid-template-columns:1fr;padding:52px 40px}
+}
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{padding:110px 20px 70px;min-height:auto}
+  .pain,.promise,.process,.split,.faq,.cta-section{padding:70px 20px}
+  .quote-section{padding:60px 20px}
+  .pain-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  footer{flex-direction:column;padding:36px 20px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+  .cta-inner{padding:40px 24px}
+  .cta-box{min-width:unset}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="diprom-startseite.html" class="nav-logo">di<span>prom</span></a>
+  <ul class="nav-links">
+    <li><a href="diprom-eigentuemer.html">Eigentümer & WEG</a></li>
+    <li><a href="diprom-skalierung.html">Hausverwaltungen</a></li>
+    <li><a href="diprom-nachfolge.html">Nachfolge</a></li>
+    <li><a href="diprom-kontakt.html" class="nav-cta">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb"><a href="diprom-startseite.html">Startseite</a><span style="color:rgba(255,255,255,.2);margin:0 4px">/</span>Nachfolge</div>
+      <div class="eyebrow" style="animation:fadeUp .5s ease both">Nachfolgeregelung</div>
+      <h1>Ihr Lebenswerk.<br>In <span class="accent">guten Händen.</span></h1>
+      <p class="hero-sub">Sie haben Jahre in Ihre Hausverwaltung investiert. Wenn der Moment kommt, den nächsten Schritt zu gehen, verdienen Sie einen Nachfolger, dem Sie wirklich vertrauen können – und der Ihre Kunden ebenso gut behandelt wie Sie.</p>
+      <div class="hero-actions">
+        <a href="diprom-kontakt.html" class="btn-primary">Vertrauliches Gespräch anfragen</a>
+        <a href="#prozess" class="btn-ghost">Wie läuft die Übergabe ab?</a>
+      </div>
+    </div>
+    <div class="trust-box">
+      <div class="trust-box-title">Das diprom-Versprechen</div>
+      <div class="trust-item">
+        <div class="trust-check">✓</div>
+        <div>
+          <div class="trust-label">Vollständige Bestandsübernahme</div>
+          <div class="trust-text">Eigentümer, Mieter, Objekte, Verträge – wir übernehmen alles. Kein Eigentümer fällt durchs Raster.</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">✓</div>
+        <div>
+          <div class="trust-label">Faire Bewertung & Kaufpreis</div>
+          <div class="trust-text">Transparente Unternehmensbewertung auf Basis anerkannter Verfahren. Kein Druck, kein Lowball.</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">✓</div>
+        <div>
+          <div class="trust-label">Ihr Team hat eine Perspektive</div>
+          <div class="trust-text">Mitarbeiter die zu diprom passen, bekommen ein konkretes Angebot. Wir lassen niemanden zurück.</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">✓</div>
+        <div>
+          <div class="trust-label">Nahtlose Übergabe</div>
+          <div class="trust-text">Kein einziger Eigentümer merkt einen Qualitätsbruch. Wir planen jeden Schritt gemeinsam mit Ihnen.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="pain-head reveal">
+    <div class="eyebrow center" style="color:var(--green)">Warum jetzt?</div>
+    <h2>Drei Situationen, die wir kennen.</h2>
+    <p>Die meisten Inhaber warten zu lang – weil der Alltag drängt und die Nachfolgefrage unbequem ist. Erkennen Sie sich wieder?</p>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card reveal">
+      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
+      <div class="pain-title">Kein Nachfolger in der Familie</div>
+      <p class="pain-text">Die Kinder haben andere Pläne. Eine externe Nachfolge wirkt riskant – aber weitermachen ohne Plan ist es auch.</p>
+      <div class="pain-quote">"Ich möchte irgendwann aufhören, aber ich weiß nicht, wem ich das übergeben kann, dem ich wirklich vertraue."</div>
+    </div>
+    <div class="pain-card reveal d1">
+      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span></div>
+      <div class="pain-title">Gesundheit & Lebensphase</div>
+      <p class="pain-text">Der Körper sendet Signale. Oder das Leben ruft – Ruhestand, Familie, andere Projekte. Die Energie, die das Geschäft fordert, steht nicht mehr unbegrenzt zur Verfügung.</p>
+      <div class="pain-quote">"Ich hätte es gerne noch drei Jahre gemacht, aber ich merke, dass ich kürzertreten muss."</div>
+    </div>
+    <div class="pain-card reveal d2">
+      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></div>
+      <div class="pain-title">Die Freude am Tagesgeschäft fehlt</div>
+      <p class="pain-text">Was einmal Leidenschaft war, ist zum Verwaltungsakt geworden. Regulierung, Digitaliserungsdruck, immer neue Anforderungen. Es läuft – aber es erfüllt nicht mehr.</p>
+      <div class="pain-quote">"Ich mache meinen Job gut, aber die Freude von früher ist weg. Ich will nicht einfach 'weitermachen'."</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE / ANGEBOT -->
+<section class="promise">
+  <div class="promise-head reveal">
+    <div class="eyebrow center">Was diprom anbietet</div>
+    <h2>Vier Zusagen.<br>Kein Kleingedrucktes.</h2>
+    <p>Wir wissen, dass eine Nachfolgeregelung mehr ist als ein Kaufvertrag. Es geht um Menschen, um Vertrauen und um ein sauber übergebenes Lebenswerk.</p>
+  </div>
+  <div class="promise-grid">
+    <div class="promise-card reveal">
+      <div class="promise-num">01</div>
+      <div>
+        <div class="promise-title">Vollständige Bestandsübernahme</div>
+        <p class="promise-text">diprom übernimmt Ihren gesamten Bestand – alle Eigentümer, Mieter, Objekte und bestehenden Verträge. Niemand wird abgewickelt, niemand verliert seinen Ansprechpartner von heute auf morgen. Wir führen weiter, was Sie aufgebaut haben.</p>
+        <div class="promise-tag">✓ Kein Eigentümer fällt durch</div>
+      </div>
+    </div>
+    <div class="promise-card reveal d1">
+      <div class="promise-num">02</div>
+      <div>
+        <div class="promise-title">Faire & transparente Bewertung</div>
+        <p class="promise-text">Wir bewerten Ihr Unternehmen nach anerkannten Verfahren – offen, nachvollziehbar, ohne versteckte Abzüge. Sie bekommen eine schriftliche Bewertung vor jeder Verhandlung. Kein Druck, kein Lowballing.</p>
+        <div class="promise-tag">✓ Bewertung vor Verhandlung</div>
+      </div>
+    </div>
+    <div class="promise-card reveal">
+      <div class="promise-num">03</div>
+      <div>
+        <div class="promise-title">Ihr Team bekommt eine Perspektive</div>
+        <p class="promise-text">Mitarbeiter die kulturell zu diprom passen, erhalten ein konkretes Weiterbeschäftigungsangebot. Wir führen früh im Prozess offene Gespräche mit Ihrem Team – mit Ihrem Einverständnis und auf Augenhöhe.</p>
+        <div class="promise-tag">✓ Angebot vor Closing</div>
+      </div>
+    </div>
+    <div class="promise-card reveal d1">
+      <div class="promise-num">04</div>
+      <div>
+        <div class="promise-title">Sanfte Übergabe ohne Unterbrechung</div>
+        <p class="promise-text">Wir planen die Übergabe gemeinsam mit Ihnen – in Ihrem Tempo. Kein Eigentümer merkt einen Qualitätsbruch. Parallelbetrieb, strukturierte Kommunikation, klare Meilensteine. Sie gehen, wenn es wirklich Zeit ist.</p>
+        <div class="promise-tag">✓ Übergabe in Ihrem Tempo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROZESS -->
+<section class="process" id="prozess">
+  <div class="process-head reveal">
+    <div class="eyebrow center" style="color:var(--green)">Der Ablauf</div>
+    <h2>Von der ersten Anfrage<br>bis zum sicheren Abschluss.</h2>
+    <p>Fünf klar strukturierte Schritte. Vertraulich, ohne Druck, in Ihrem Tempo.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="process-circle">1</div>
+      <div class="process-time">Woche 1–2</div>
+      <div class="process-title">Vertrauliches Erstgespräch</div>
+      <p class="process-text">Kein Pitch. Wir lernen Ihre Situation kennen – Größe, Struktur, Zeitvorstellung, Wünsche für Ihr Team.</p>
+    </div>
+    <div class="process-step reveal d1">
+      <div class="process-circle">2</div>
+      <div class="process-time">Woche 2–4</div>
+      <div class="process-title">Unternehmens&shy;bewertung</div>
+      <p class="process-text">diprom erstellt eine transparente, schriftliche Bewertung. Sie erhalten das Dokument – unabhängig vom weiteren Verlauf.</p>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="process-circle">3</div>
+      <div class="process-time">Woche 4–8</div>
+      <div class="process-title">Letter of Intent & Due Diligence</div>
+      <p class="process-text">Wir unterzeichnen eine Absichtserklärung und prüfen gemeinsam alle relevanten Unterlagen. Diskret, strukturiert.</p>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="process-circle">4</div>
+      <div class="process-time">Woche 8–16</div>
+      <div class="process-title">Übergabe&shy;planung & Verträge</div>
+      <p class="process-text">Kaufvertrag, Übergabeplan, Teamgespräche, Kundenkommunikation – alles koordiniert diprom gemeinsam mit Ihnen.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-circle" style="background:rgba(118,210,21,.12);border-color:var(--green)">✓</div>
+      <div class="process-time">Ab Woche 16+</div>
+      <div class="process-title">Nahtloser Betrieb</div>
+      <p class="process-text">diprom übernimmt den laufenden Betrieb. Sie gehen – mit dem guten Gefühl, dass alles weiterläuft.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PERSPEKTIVEN SPLIT -->
+<section class="split">
+  <div class="split-head reveal">
+    <div class="eyebrow center">Zwei Perspektiven. Ein Ziel.</div>
+    <h2>Was Sie suchen.<br>Was diprom bringt.</h2>
+    <p>Eine gute Nachfolge funktioniert nur, wenn beide Seiten verstehen, was die andere braucht.</p>
+  </div>
+  <div class="split-grid">
+    <div class="split-col seller reveal">
+      <div class="split-col-label">Verkäufer-Perspektive</div>
+      <div class="split-col-title">Was Sie von einer Nachfolge erwarten dürfen</div>
+      <ul class="split-list">
+        <li>Ein fairer Preis, der Ihre Jahre Arbeit widerspiegelt</li>
+        <li>Eigentümer und Mieter, die weiterhin gut betreut werden</li>
+        <li>Ein Team, das eine ehrliche Perspektive bekommt</li>
+        <li>Eine Übergabe in Ihrem Tempo – kein Druck, kein Chaos</li>
+        <li>Diskretion während des gesamten Prozesses</li>
+        <li>Einen Nachfolger, den Sie persönlich kennen und dem Sie vertrauen</li>
+      </ul>
+    </div>
+    <div class="split-col diprom reveal d1">
+      <div class="split-col-label" style="color:var(--neon)">diprom-Perspektive</div>
+      <div class="split-col-title">Was wir in eine Nachfolge mitbringen</div>
+      <ul class="split-list" style="">
+        <li style="color:rgba(255,255,255,.75)">Bewährte Plattform für reibungslose Bestandsübernahme</li>
+        <li style="color:rgba(255,255,255,.75)">KI-gestützte Prozesse, die Qualität sichern und skalieren</li>
+        <li style="color:rgba(255,255,255,.75)">Erfahrung in der strukturierten Eingliederung von Beständen</li>
+        <li style="color:rgba(255,255,255,.75)">Softwarerecht & DSGVO-Compliance von Beginn an</li>
+        <li style="color:rgba(255,255,255,.75)">Ein Team, das Hausverwaltung wirklich versteht</li>
+        <li style="color:rgba(255,255,255,.75)">Langfristiges Interesse – wir kaufen zum Aufbauen, nicht zum Weiterverkaufen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-head reveal">
+    <div class="eyebrow center" style="color:var(--green)">Häufige Fragen</div>
+    <h2>Was Inhaber uns<br>am häufigsten fragen.</h2>
+    <p>Offene Antworten auf die Fragen, die sich jeder stellt – aber nicht immer zu stellen traut.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Was passiert mit meinen Eigentümern und Mietern?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-body"><p class="faq-answer">Ihre Eigentümer und Mieter werden nahtlos übernommen. diprom informiert sie rechtzeitig und persönlich – in Ihrem Namen und mit Ihrem Einverständnis. Qualitätsbrüche in der Betreuung schließen wir durch parallelen Betrieb während der Übergabephase aus. Kein Eigentümer verliert seinen Ansprechpartner über Nacht.</p></div>
+    </div>
+    <div class="faq-item reveal d1">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wie wird mein Unternehmen bewertet?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-body"><p class="faq-answer">diprom nutzt anerkannte Bewertungsverfahren – typischerweise auf Basis des jährlichen Verwaltungshonorars, der Bestandsgröße, Vertragsqualität und Profitabilität. Die Bewertung ist schriftlich und wird Ihnen vor jeder Verhandlung übergeben. Wir arbeiten transparent – keine Blackbox, kein Druck.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Was passiert mit meinen Mitarbeitern?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-body"><p class="faq-answer">Wir führen frühzeitig – mit Ihrem Einverständnis – offene Gespräche mit Ihrem Team. Mitarbeiter, die zu diprom passen, erhalten ein konkretes Angebot. Wir erzwingen nichts und versprechen nichts, was wir nicht halten können. Aber wir nehmen Ihre Mitarbeiter ernst und lassen niemanden im Unklaren.</p></div>
+    </div>
+    <div class="faq-item reveal d1">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wie lange dauert der gesamte Prozess?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-body"><p class="faq-answer">Typischerweise 4–6 Monate vom Erstgespräch bis zur vollständigen Übergabe. Das hängt stark von Ihrer Bestandsgröße, der Komplexität der Strukturen und Ihrem persönlichen Tempo ab. Wir passen uns an – kein Inhaber sollte das Gefühl haben, durch einen Prozess getrieben zu werden.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Kann ich den Prozess abbrechen, wenn es nicht passt?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-body"><p class="faq-answer">Ja – bis zur Unterzeichnung des Kaufvertrags sind Sie frei. Die Bewertung gehört Ihnen, egal was danach passiert. Wir arbeiten ohne Exklusivitätsdruck in den frühen Phasen. Wenn es nicht passt, trennen wir uns respektvoll – mit einem guten Gefühl auf beiden Seiten.</p></div>
+    </div>
+    <div class="faq-item reveal d1">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Wie diskret läuft das ab?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-body"><p class="faq-answer">Absolut vertraulich. Eigentümer, Mitarbeiter und Wettbewerber erfahren nichts, bevor Sie es entschieden haben und freigeben. diprom unterzeichnet auf Wunsch eine NDA vor dem ersten inhaltlichen Gespräch. Diskretion ist für uns keine Option, sondern Standard.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section reveal">
+  <div class="quote-inner">
+    <div class="quote-photo">
+      <img src="data:image/jpeg;base64,data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDz0QHHIqeKHNWmiOOlCpgYFciTex1NpEe0L0phGamdcdaglnjiXJNUosTkhGBqpPcCI8mpbScX8xjU8CqWvWLW4V0JJPamS3pcV9a8tMLWfd3zzEZOc1HBplxOQSMLW2NJhEaEgbhTSIOcSGWVyFUmugsbdVtBGU+etO102NRuOKuD7NbnccVSg2TzIzLbRQSX2YJrUisY4kG8jFQzaqW+S3jLE+gpIrHUb4jOVX2pvlQassPeW9uMKRkVv+CvES2GupNJETEwKE+mao2PhQLh5uT710mjaNB9uit4Qpkc4ArkxajOlKMtrFwVmafjQSeKPs8NoNscYJLeua5y18EwWy7pBk+9dxqs0HhtAJwuGUlSBwa851nx085ZbZSB6mvKy/nceWn8Pc1lbqbZt7KyXDMoA7VlXev2FtkJgn2rh73W552JlmP0BrGm1VEJ+bJr2owaMnI7K+8TTTgqnyrWFcXpkJZ3Ga5uXV5GyEGPrVZZ5p5AGc/StOUm56feeIPDzfDVNNSELqyEBcRcl92S+70Iqp/wjGsr4RXXiqLbFdwQk7tmcbvpWB4a0+1vNdsor5ytsZB5nPUele1/FLxPpkXhiLQ9MkieSYKrLEQRHEO348cVzzl2NYx11PnbUfMeTc5yKohea6S7szJATjkVhmI56VtSqXQpQ1IQtFTeWfSitOYmx6D9qRhycVVm1GKEH5uaxdQkntX2tkZ9KoLDc3JzggeprGKsXJmld60z5CVVjup5jjYW+lT2mjg4aU5NbttYRooworRNmTKejxyQXPmOuAe1bN9EL0L8uAKFREHSnmXA4rRR7kufYhigEIwV/SqV8SjblbHtWhvJ611dj8J9Z8QaKuofabe281N8MUgJZx2Jx0zTaVtBJu+pyljBc3Vo0scbsiD5mA6VLbWK3sm0jOOtelfDzUdK0rwjNY3zRw3UEki3Mb9WIOMe/pXmU+ofZL6drUARs52j0GeK4MNiZ1ak4TjZI0cUtUbcVpZWIDMqU2XxFa2uRGgJ9hXJX+qTyoWeU/QVgTauMHnJrssuhN2dveeLLiXiP5R6mk0TxVcaXq0N8ZA7RnO09CO4rzxtSlkbA4FTJI55LGsa0VKLjLZlxPp2+fSPF/gaTVLpY0xbuwcPzCwzx+YFfM95fSkttqymp3aWrWyXEiwt96MMcH8KolC/41w4Og8PdX0e3kXLUzZJ5JCdzGocVYniKSEVGFr1U1YyaGYq9p8BkkziqwT2roNMtdsQOOTWdWdolQjqTQW5GD0q8kTOfmyaligPpV+G1PpXC5HVGJWS0DoQR1rm76zNvdMuODyK72C0J7Vn6/pP7pZwOnWnTnrYc4aHD+Xg9KK1mtcAYFFdJhY6XUdNju7lWwAKz7i2SCYQR4JNXxDeTtl8qB6cVmWsUk2uuu4kIOc+tWjKTfUnS2dGGelW14WrjwnHNV2jxVpme4wBm5AJA71VuLtYRz1rQGqQ21q0TJ81c3cyi4cntmjnZnFybtYmk1PdxnAr3fQ/iz4bj8J28t5dCK7t4VR7cDlmUY49jivm3VAYUUoazBK5U5JNNSNbHZ3GuNqOrX14vH2iZ5CB2yc1A8jOc1S02ErbjjrWisDHtUmqSM+9U/ZWPtXMEV2t7bf6C59q5AJzTTsTIZGp3iteO3O0ZqhGv7xcetb8ULGMfSsasioIqrABTxGAeBVwQCnpAM5xWNy7HP6jH+8HFVEjya1dUA+0AelUlXmt4y90hrUdbW/mTqvvXX2lqqxqMdqxtFtTJcFyOBXWQw4HSuetK7NqasJDCOOK0re1JwcUlvb7mFbVvb4UVzNnRFEcNrwOKmu9OFxZvGV7Vow2/A4q+ltxjFSnZ3NLHklxZGKRkx904orr/EGkmK5Lqvyt1or0IyurnM42ZJc6hpsKFF2Zx9a1vBHgrQ/EV5d3krtiIKCkMm0sTnk/TFePtczMMbjV3w94s1bwpqpu9On2tIu10cZVh7itItJnPKhK12zv/G2ix+F9dhsIrgyw3EXmxl/vKM4IPrXMuN8hUOKw9d8San4g1Y6lfXBe4xtUgYCr6AelZov7lGLeaxJ65pt66E+wnfc6G5jUNtbmqE9kCu5DVD+05JpUTJyTgk1ueU3lKc5yO1NbEuLWjOavrZ5PlbmqH9nyp/CSufSuwFsrNlhk1ajtY2XBUVzzxMYux30svnOPM3YpWEA+zIAvarogOOlX0t0WHCjpRtwOlaxqKaujKpQdJ2kZt7ATYP8ASuE24Y/WvSbtN1lIMdq87kTbIw9CavoYTCIDzF+tdPAhMS/SucgQGVBx1rroE/cr9KwqFQIBFk1N5YRCx7Cp0iz2qjqlyIYvLU/MazWuhZz163mXTEdBxTI48mphFnmrVrBvmRQOprbZGdrm7o1p5duGI5NbkMee1Q28QihUHitO1jH4Vwzld3OiKLFpF04rZtoc1Tt0wa2LUAismzpii3bRrwuKulEhjLuQAO1RIyW8fmNgAVh3t/8AbpCElAjHX3rSnTc2TOXKihr2pfa5fKiUYU8mioNRa1gs2xINx70V6MIKKsjjlNtnlxU4zVS4OHU1pS2E8K5Uk1mzeYHVZEPXrUo7prTVDfMDNimyOqCpZYAWGO9Na0YY4oJlF9BunQNfXJRCQy8iu2gtXgsds3LAdawPCsGNaII/hrvNQtx9nbAqn8OhyqP7xXOcjXJzV2KMVBEnFXIzgV482fQRJVUAUhUEZpC9LC3mSrCOWY4Fa4WfLKzMcXS56d+qHw2jXSOgIVMcu3QUad4V0izl86aAXUhO4mcZX8F6fnmtFUEaBF+6On+NSICfet6laUvh2MqOChFXnqzWuRoYtR5el2mSPufZ1K5/KuXvdJicmW1jWLv5Sk7fwz0rTlGQMVDkqDzWME1rcc8NTtY5K9vEtEYdGHGK5ueRrljI34V0viqxEmy+j6k7JQP0P9Pyrm4o85FdtNK1zyaicZWFjXcuK09IhzcF2HC1VgiA4rpNGs1MRRhjf3pz2JQXl2n2ceW3Oa3dKcTWqN1rj9UsTpt4F3kox6HtXReG5wVMR7dK5qtPljoa05XZ0kQINalu2FFZ6Lir8PCFj2Ga5TpTINWuZGXyIyRkc4rFktTHAfnIOO5qX7Z59zKCDlTjNRPqFsQQ7crwRXqUYcsUcdSV2chdyuZnRmZgpxyaKfqN1E80ojHU9aK3MBC4Ycis+7jjOCQOtON6mMnioJrmN8fN3rnS1PZnVi1uMniTzFxRPCY4wwqZtrsuPalu5VSMJTJZJ4WVjrqlhjIr0O9hBVh6ivPfD9wDrsQFekzrnHuK0WxxVXaZyDqYZWUjjNIZK2NUsgYvNXqKwT0ryq1JwkevhqqqRJt9aWjRqXlmIywGxfbPWsfdgc1u6SuLFJP77Mf6f0qYxZ1Satylxo8/WlHy1MRkZFNKE1siL6EZwTzUUmMGp1TnFMljx2qtDB3bMm7gFxaTwH+NSB7HtXDxriTmu+f5W/GuLlQC8lA7Ow/Wuil1PLxC1CBN0yqB1NdFPMbO3DKvKis/SLbzrsE9Frob21jmtmTcAcUpTtNIwtocnrF19rFtI/BJqfTbqeyvEfYfKbjOaTXLRYbaAhxlTWeNQdohGMcd/pWk1zKxMHbc9TtZRNEr+oq+nMbfSuZ8N6gl1aJHu+YDmujRtgx1rzXFxZ2RkmZCxp50mAA2earz6XbyFiwyetWLuP7PeeYfuN1pt0zCDMeCT0r1KUlKKZyTVmcprUUVsihFxzjpRV/WLN5bWNW6jkmitjFkl18PNfs4nnk0mZ4UBJZcNx64HNcffWTW05SSCSJuu11Kn9a+tI9b0qQKE1G0JIGB5y55/GvOfjO2nvZacjGM3okJGMbhHjnPtnFTypK9zWFaTlZrc8KW4IcDB4pJn81xmp7lUP3OtNt7OSbAQZPWsj1JJqI7Qjs8QwDtXrjjMa/QV5dZ6fNZ6vbTyL8u7n2r00XUTxxgEZwKqL0POru8rop34P2KTPpXH+bgnNdndSwujRlxkiuMngC33l5+Uk0NRktTONScHeLGeY07CNBlmOAK6ywhMWi2iMMSx71dT2bcT/Iiuf8A7O33CCBirAdQa6KzJGmhGYM6sAxHdtozXNVslZHp4Juo3Uk9VoWhNFGo3sAT61G8yk/eU49DXPaheeWzmXzMsdqJGMs1YUdzezSSSRQzCNHCHewLA/l7Uo021c1niVGVjvFuFDE5qCa6BOAaqWNlcS2RnkbkrwP8a5XVry/WZ1ihZlRgDgnn8BTjC7sjOpXcY3Z1k0kZIAYFh6Vyt/b/AGa/kBdXDneCvv2+tWLFrgyiOaJ45EIJy2QR7UuxZNcweR5nNWly3OWo+dXI7aZkVljyr9gaq3MuplXPnbcdsV1radb/AGtZQBtXrUpsrKfMu5QvcUU2pe8YSi07HnRS6vQwknY7e1XbSxWFUZgdzDrVnXGgt9VRICNrAZxW3qxtYbG1eLBbHOK0beliUldooaBFPbahheFlbgeldzC0iEo5+YVwen6qsF5FI+AFbvXZ2l39ulaZfunpWVeC5bmlOVpWNKSBbqLY/wCFc9qlrf2+PI+ZQeldIh4GKfgOMMM/WuenUlB6Gs4qRy4vI5rMpPkSYx0oreuNKtZlO5Bk0V1LELsYOizzbUr6VUJVtoJ6YqkbqS4G6SRnOMZY5ro7jw410F+ViD04qpJ4d+zRN1BGetUpKx1+xTncxIYwS2T16V2FhY2UUdv5e0uwHOeW9aw7bQrm6jaRMKo6E96rQmfTr1mJ3EDHFZyi207nbNQdJRT1R2mp20SbBxkmsLXru50yyEkbHHAz6VQfVL64eOSZCIweDS6sZdR09wAxRRknFbKLvoeO4aN3ObXXLszl2nbcfetWx1J57lHkOccZrkGcq5GORXT+GNFv9ZEjW8TGOP7z9ga19m56JHO6kafvTdkjqrO/jgumm3DkVvWEiy2qyhcLId+R36j+lcRe+H9SsyQ+Tzxg9a7e30+90nQ7CK+t2iYx/Kx6EZz+fPNYYijKEVdHoZbiKdSo0noy1PbxlWeOOMlhjcwrMj064e4MjSYjU5wBkE/jWnakMQrnOamuZVhAC4yTgCudSa0PTlSi9wVPLtivqcmudms5JG3I5BBPFdQAvkkFgSOprHjkT7W65BGeKIN3ZniIR0KaW5iiJfb7YGKzLSzM2rzEdjnP1rbvHUjiq1iVinkYEEkgnHbiru7Oxw1ko2M/VnurGKTa2Q36Vy8V3qGxkEzBSc4rrNYmju5BH6dayUtI8FUGWzW1JWjqjjlrIyPsU11OC7FmNdZpejs6qJnLYHGabZ2WLuL5e1bMim3JIOMU5O6sOGjuc9q+j+ZcIIl6Hmum04C205YsAMtV4wplG9s7uaseWcgjJDHHSs5xTirjb1uilBq858SR2XBRlJ612HQ5xXE/Ykt/GtkyOSXjYEH8Oa9Be12wGTI/OsZ09rGlOWmpnscZz+FFU57tfOA3Dg0VkkanN6H4/wBPeOOK5Ro3AwcjirGsa1Z3cTyQEEYNeQq2CCDXdW9tHPocZhxvK9a63Cz0KwtTmupGxb3876cPs6jkcmuftmca2FvSNjnrV3SrwQRtbSEBwcU640o6pfwRwn95nOR2pp66jnFKzOgu7azazEcYXpWjpmjwNp8g2/eUj9Kt6b4P8mNftEpJwM5NdAthDbxBIz0r0KWLpU6HL1PDxeGnWrKSdkrHhOqeDplu3dAyqT6cV674MsrHS/BccCvGsmCz5IBLGuT8TeL7dLh7TToUby2KtM3IJHXaPr3ri7nULi5fdLIWNY4WtOk+Zo1x2GhiafJex6Nqt9aqFY3ELMjglQwJPPpXReKfFWga5o9rZ6ZdGe6gIlcLGQFGMEEnv06V4bLeGNCBgE+lWPC92ya9EZHAhc7G3E4OavF4iVe7kicuwcMHyxi72PS4mC4b0FNMkbyM8yluOB6e9PRBFbu0hCsnr19c1gBbi/vWT7Q0MYGQQOT9a8tJn0U62qZJceZuIiuJI1kJBy+7HGcVHazRxQsjffVvv56mpbvR3SUk3yOSMAmIk/hzVC404RhAtwzNnkDgY9au2hzVZSTvcvzyHaWJxxwa5VNZl03xg0wHmRKAjxE4Dheo/nXRtdx/YGlJ+VBnd9K82lnaa8ac8M7Fj+NbU46HJXqXsj6T0WLwxr1itxYBGYj54mAEiH0I/r0qa68M6VH9yJQ59q+e7a4mTa8Urow5BViCPyrr7Xx9r0McYlu1uNgwPOQE/ieCa0bdjNSR6QnhSJv3g+XHSsu/8O3LagFgP7oj5jVLT/ijFMgi1C2aDj/WQ/Mv5df510NhraarA0lrMrxKcbgen19KjUXMzMg8L3CTAsxKgVoQaNJvK4+QdDmpo7+WQvEWAC980yLUHUvGJBgeppO7K5m1Yyz4Pd9XW/8ANO5ARjPar15ZagwMcMwK9+9Qx6jIb14/OXH1o+3yJctGsuQRRYSbOY1bTbyyfLSE570Vf1i985/KLZNFZydnYpJtHh9dt4WvENmyN1UYri1UEVfsbqS13eX3rSorqyLw9RU53extTBjdzXKnoTXdfDy0LxSajPyzH5M+ledxSSG2ZH6v6e9eueH4Vs9FtYhx8ozU8tohWq88vI3zdM0nJrJ8U6hNYeHr26U7SE2IfduBVsuA1cN8RtYmkS30peI+JX9z0H9amEbsxvc4POTTWalqNzXWBWmJY8VYhHC7eCeAKEQEZxzTttJgj0ma/a80u0ijzllXdj+JsDOcfQ0txp11ahSPmlbBOR/niuY8Faoh1M6dMAwzlATwR3FesGNLuTecFTGeg4H+c1yTi07HZCaauefXZn8s7mA4JA7YqvbiSaSMTlgr/IGz61uarZE3RAOU4Ut/n14qc2iNaR+SFCq5bk9aSuTUkjz7X5JNOtrjT3GWd8Bs9q5dh8m70Ird8ZXv2rWiA2QihSOcg981z43N1Py+ldcVaJxSd2ato2UFXD0qja/cBq0DRYpCluKmsdSudPuRc28zxuh42ng/Udx7VXbgVFIcfKKLDbsehaR4gn1GPzSQr5IcDpmqWp6rdRTN5chGT61Q8H3kdubqN49xO1l/UH+la93PbTOS0WPqKx5HznVB81MxYtUujNu807j3zXYaKxnu7cSEtu681gotoCDsH5Vv6Ko/tKDb90UTWqMrNMXxJCsGqIEGARRS+IWa51oJHyQKKzmtRo8UdDFjPQ1Zs8M5zWhpNvb6rpzxuQJl/OsqOOS1vHgkGGU/nXQ1oYp6mlau9xq9rb4yC4FeyI/krbx+gAryXw5AJvEtrnoCTXrN3FtkQjsRUMbL78RlicY5zXkXiDUm1PWZLhj8u4Knso6V6T4ruxYeGpWD7ZJcRpjrz1/TNePTMTJ+NVSXUNh4OWNI4pu/bn1p+OBWpI5BhaUDrQeBilHyxsfQUDMJ3ddQEkbFWVtwI6g16h4f+JUP9mm21dmjlGMOgyrYI69xXmSR7pXb3xUixjkVMknuEZNbHp1x4s06WeUC6iIJ4LMcE9RWDq3jWOa0a208McjG9u3rXFSxhBUtpF+43EcsSaUaaJlUbI5SzsWYlmPUk5JpyKSuMdKsGMGpYoflzjrzWjJRLaLiOpsUQptU5pxPFI0I2PIpojzzSjlz7VDPMd3lR/e/lQSzS0m5W01KNy3Yggc9qu3moeZKThhWHbZt5FkHLKc8966mKKG5DSFQAwyKzcdbmkJacplxXuJBknGfWuz0PWbSKQO55C+tcsunCWZjHjA7GrQtTBHkgA+lS1cq1jaS9a71t5UPGO9FVrG1kSEzbwKKdgueW2ktzp1wk6o6+uQQCK19Uube7SG5jwJO9epHwtpt7bi3uAFYfnXA3HhtLfxG1lExdOq5pqoprmRm4uL1Me21NtOuorqPkoeRXfweNba9W3UyJvYgYzzXC6zY/wBnzTwSJhwOmOtYWnpI+oQCPhg4OfTFVCKaJbbeh6h8QNSE93aWyPlYYfnH+03P8sVw5cbuauX9w1zcPI7FmY5JPes1+DTirIqRKvzSe1XFHOarRjnNWA3y1SJQhOXxROdls30pF5eo9QbZb/jQMpQLwT/eJNSYw9JANsaD2pWYbqgRXuz0UdTV5Itkar6ACqQXztQVewIrW21cdibXKzriM+p4H48Vb2hQAO1QzD99bx9y+4/Qf/XxVnigpIY7bVpgbK1DNJmQL2FPLbUoC4yaXykJHU9KZBFsBZuXbkmkVfNkDN0X+dSs6htoOSe1JgOHFdFo7fabIReYFaM4I747VzZbA5qa0mWOfdI+xcdfSlsNbndLYxLb8ThXPesyeyuVtnnkuAyr0AFZHnqwAS4bj3qQTP5ewzllznBNS5JmpqQvLLYkbypI6UVFbzK3y7wOKKSmLlOjvn8y8lfcQV6YNchfag1nfx3acyRtn60UVz0dFY2xKXO0YPiDWzqt21wU25XbiotItxDbPdMPmf5U+nc0UV1rY5YLUfI2STVWRuaKKYmWEbgVMzYQUUUwHxfeH0qtqbZ8tPU0UUgGL1x6VGCPMJPaiipAXTV3TtIfc1qriiirGiuh8y9d+yDaP61M7YBoooQdCltfmYq3lltgfHG7GcZ9cUSN8lFFMkSWfaBHEMu36UoCwKMnLt19TRRSGIGLPgfe/l/9epVQADv/AFooqQMW58yG6kUEjnIwe1It1OvSR/zooq7JoRKNQuV6Sv8AnRRRRyoHJn//2Q==" alt="Sebastian">
+    </div>
+    <div>
+      <div class="quote-text">"Ein Lebenswerk verdient einen Nachfolger, der es wirklich weiterführen will – nicht einen, der nur die Einnahmen übernimmt."</div>
+      <div class="quote-author">Sebastian – Gründer & CEO, diprom</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <div>
+      <div class="eyebrow">Vertrauliches Erstgespräch</div>
+      <div class="cta-title">Sprechen wir.<br>Unverbindlich und diskret.</div>
+      <p class="cta-sub">Sie müssen sich noch nicht entschieden haben. Das Erstgespräch dient dazu, dass beide Seiten verstehen ob und wie eine Nachfolge passen könnte. Kein Druck, kein Pitch.</p>
+    </div>
+    <div class="cta-box">
+      <a href="diprom-kontakt.html" class="btn-primary">Gespräch anfragen</a>
+      <p class="cta-note">Vertraulich · Kostenfrei · Unverbindlich</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="diprom-startseite.html" class="footer-logo">di<span>prom</span></a>
+    <div class="footer-claim">Digital wo möglich. Persönlich wo nötig.</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="diprom-impressum.html">Impressum</a></li>
+    <li><a href="diprom-datenschutz.html">Datenschutz</a></li>
+    <li><a href="diprom-kontakt.html">Kontakt</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 diprom GmbH · Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.07, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function toggleFaq(q) { q.parentElement.classList.toggle('open'); }
+</script>
+</body>
+</html>
