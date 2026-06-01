@@ -217,6 +217,9 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
     <div class="form-card">
 
       <div id="form-main">
+        <form name="kontakt" method="POST" data-netlify="true" id="netlify-form" onsubmit="return false;">
+        <input type="hidden" name="form-name" value="kontakt">
+        <input type="hidden" name="anliegen" id="anliegen-hidden" value="">
         <div style="margin-bottom:28px">
           <div style="font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Kontakt aufnehmen</div>
           <div style="font-size:1.1rem;font-weight:700;color:var(--white)">Was können wir für Sie tun?</div>
@@ -252,36 +255,36 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="f-name">Vor- & Nachname *</label>
-            <input class="form-input" type="text" id="f-name" placeholder="Max Mustermann" autocomplete="name">
+            <input class="form-input" type="text" id="f-name" name="name" placeholder="Max Mustermann" autocomplete="name">
             <div class="form-error" id="err-name">Bitte geben Sie Ihren Namen ein.</div>
           </div>
           <div class="form-group">
             <label class="form-label" for="f-company">Unternehmen / Objekt</label>
-            <input class="form-input" type="text" id="f-company" placeholder="Optional" autocomplete="organization">
+            <input class="form-input" type="text" id="f-company" name="unternehmen" placeholder="Optional" autocomplete="organization">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="f-email">E-Mail-Adresse *</label>
-            <input class="form-input" type="email" id="f-email" placeholder="max@beispiel.de" autocomplete="email">
+            <input class="form-input" type="email" id="f-email" name="email" placeholder="max@beispiel.de" autocomplete="email">
             <div class="form-error" id="err-email">Bitte geben Sie eine gültige E-Mail-Adresse ein.</div>
           </div>
           <div class="form-group">
             <label class="form-label" for="f-phone">Telefon</label>
-            <input class="form-input" type="tel" id="f-phone" placeholder="+49 XXX XXXXXXX" autocomplete="tel">
+            <input class="form-input" type="tel" id="f-phone" name="telefon" placeholder="+49 XXX XXXXXXX" autocomplete="tel">
           </div>
         </div>
 
         <!-- Kontextfeld – ändert sich je nach Anliegen -->
         <div class="form-group" id="context-group" style="display:none;margin-bottom:3px">
           <label class="form-label" id="context-label">Details</label>
-          <input class="form-input" type="text" id="f-context" placeholder="">
+          <input class="form-input" type="text" id="f-context" name="details" placeholder="">
         </div>
 
         <div class="form-group" style="margin-bottom:0">
           <label class="form-label" for="f-message">Ihre Nachricht *</label>
-          <textarea class="form-textarea" id="f-message" placeholder="Beschreiben Sie kurz Ihr Anliegen – je mehr Details, desto besser können wir uns vorbereiten."></textarea>
+          <textarea class="form-textarea" id="f-message" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen – je mehr Details, desto besser können wir uns vorbereiten."></textarea>
           <div class="form-error" id="err-message">Bitte schreiben Sie uns kurz, worum es geht.</div>
         </div>
 
@@ -297,6 +300,7 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
         <p class="form-note">Kostenfrei · Unverbindlich · Wir melden uns innerhalb von 1 Stunde</p>
       </div>
 
+        </form>
       <!-- SUCCESS -->
       <div class="form-success" id="form-success">
         <div class="form-success-icon">✅</div>
@@ -362,64 +366,44 @@ function toggleConsent() {
 
 function submitForm() {
   let valid = true;
-
-  // Validate name
   const name = document.getElementById('f-name');
   if (!name.value.trim()) { name.classList.add('error'); document.getElementById('err-name').style.display='block'; valid=false; }
   else { name.classList.remove('error'); document.getElementById('err-name').style.display='none'; }
-
-  // Validate email
   const email = document.getElementById('f-email');
   const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRe.test(email.value)) { email.classList.add('error'); document.getElementById('err-email').style.display='block'; valid=false; }
   else { email.classList.remove('error'); document.getElementById('err-email').style.display='none'; }
-
-  // Validate message
   const msg = document.getElementById('f-message');
   if (!msg.value.trim() || msg.value.trim().length < 10) { msg.classList.add('error'); document.getElementById('err-message').style.display='block'; valid=false; }
   else { msg.classList.remove('error'); document.getElementById('err-message').style.display='none'; }
-
-  // Validate consent
   if (!consentChecked) { document.getElementById('err-consent').style.display='block'; valid=false; }
   else { document.getElementById('err-consent').style.display='none'; }
-
   if (!valid) return;
 
-  // Submit animation
+  // Sync anliegen to hidden form field
+  document.getElementById('anliegen-hidden').value = document.getElementById('anliegen-val').value;
+
   const btn = document.getElementById('submit-btn');
   btn.disabled = true;
   btn.textContent = 'Wird gesendet...';
 
-  // Build mailto link
-  const nameV = document.getElementById('f-name').value;
-  const emailV = document.getElementById('f-email').value;
-  const phoneEl = document.getElementById('f-phone');
-  const companyEl = document.getElementById('f-company');
-  const anliegenEl = document.getElementById('anliegen-val');
-  const contextEl = document.getElementById('f-context');
-  const msgV = document.getElementById('f-message').value;
-  const phoneV = phoneEl ? phoneEl.value : '';
-  const companyV = companyEl ? companyEl.value : '';
-  const anliegenV = anliegenEl ? anliegenEl.value : '';
-  const contextV = contextEl ? contextEl.value : '';
-  const anliegenMap = {eigentuemer:'Eigentümer & WEG', skalierung:'Hausverwaltung / Skalierung', nachfolge:'Nachfolge', allgemein:'Allgemeine Anfrage'};
-  const subj = encodeURIComponent('Anfrage diprom.io' + (anliegenV ? ' – ' + (anliegenMap[anliegenV]||anliegenV) : ''));
-  const bodyLines = [
-    'Anliegen: ' + (anliegenMap[anliegenV] || 'Nicht angegeben'),
-    'Name: ' + nameV,
-    companyV ? 'Unternehmen: ' + companyV : '',
-    'E-Mail: ' + emailV,
-    phoneV ? 'Telefon: ' + phoneV : '',
-    contextV ? 'Details: ' + contextV : '',
-    '', 'Nachricht:', msgV
-  ].filter(Boolean).join('\n');
-  window.location.href = 'mailto:kontakt@diprom.io?subject=' + subj + '&body=' + encodeURIComponent(bodyLines);
-  setTimeout(() => {
-    const fm = document.getElementById('form-main');
-    const fs = document.getElementById('form-success');
-    if (fm) fm.style.display = 'none';
-    if (fs) fs.classList.add('show');
-  }, 800);
+  const form = document.getElementById('netlify-form');
+  const data = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  })
+  .then(() => {
+    document.getElementById('form-main').style.display = 'none';
+    document.getElementById('form-success').classList.add('show');
+  })
+  .catch(() => {
+    btn.disabled = false;
+    btn.textContent = 'Anfrage absenden';
+    alert('Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an kontakt@diprom.io');
+  });
 }
 </script>
 
