@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- SEO -->
+  <title>Eigentümer & WEG – Hausverwaltung mit Transparenz | diprom</title>
+  <meta name="description" content="diprom verwaltet Ihre Immobilien transparent und digital. Eigentümerportal, 85% Reaktionszeit unter 1h, proaktive Kommunikation. Jetzt kostenloses Erstgespräch.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.diprom.io/eigentuemer">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.diprom.io/eigentuemer">
+  <meta property="og:title" content="Hausverwaltung für Eigentümer & WEG | diprom">
+  <meta property="og:description" content="Endlich eine Hausverwaltung, die kommuniziert – auch wenn nichts passiert. Eigentümerportal, klare SLAs, faire Preise.">
+  <meta property="og:image" content="https://www.diprom.io/og-image.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="diprom GmbH">
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hausverwaltung für Eigentümer & WEG | diprom">
+  <meta name="twitter:description" content="Endlich eine Hausverwaltung, die kommuniziert – auch wenn nichts passiert. Eigentümerportal, klare SLAs, faire Preise.">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.diprom.io",
+  "name": "diprom GmbH",
+  "description": "Moderne Hausverwaltung – digital wo möglich, persönlich wo nötig.",
+  "url": "https://www.diprom.io",
+  "telephone": "",
+  "email": "kontakt@diprom.io",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Reichweinstraße 20",
+    "addressLocality": "Moers",
+    "postalCode": "47441",
+    "addressCountry": "DE"
+  },
+  "founder": {"@type": "Person", "name": "Sebastian Reinemann"},
+  "areaServed": "DE",
+  "serviceType": ["Hausverwaltung", "WEG-Verwaltung", "Immobilienverwaltung"],
+  "slogan": "Digital wo möglich. Persönlich wo nötig."
+}</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1A1A1A;--black-deep:#0B0F14;--black-mid:#1C222B;--green:#76D215;--neon:#C7FE0B;--white:#FFFFFF;--grey-bg:#F4F6F8;--grey-light:#F5F7FA;--grey-mid:#6B7280;--serif:'Syne',sans-serif;--sans:'Montserrat',system-ui,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--grey-light);color:var(--black);overflow-x:hidden;max-width:100vw}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(11,15,20,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(118,210,21,.12)}
+.nav-logo{font-family:var(--serif);font-size:1.5rem;font-weight:800;color:var(--white);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green)!important;color:var(--black)!important;padding:9px 22px;border-radius:3px;font-weight:600!important}
+.nav-cta:hover{background:var(--neon)!important}
+.btn-primary{background:var(--green);color:var(--black);padding:14px 30px;font-family:var(--sans);font-size:.85rem;font-weight:600;border:none;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-primary:hover{background:var(--neon);transform:translateY(-2px);box-shadow:0 8px 24px rgba(118,210,21,.3)}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.65);padding:14px 30px;font-family:var(--sans);font-size:.85rem;font-weight:500;border:1px solid rgba(255,255,255,.45);border-radius:3px;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.btn-ghost-dark{background:transparent;color:var(--black);padding:14px 30px;font-family:var(--sans);font-size:.85rem;font-weight:500;border:1px solid rgba(0,0,0,.55);border-radius:3px;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-ghost-dark:hover{border-color:var(--green);color:var(--green)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--green)}
+.eyebrow.center{justify-content:center}
+.hero{background:var(--black-deep);padding:140px 60px 100px;position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(118,210,21,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(118,210,21,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;animation:gridShift 24s linear infinite}
+@keyframes gridShift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+.hero-glow{position:absolute;top:-150px;right:-150px;width:700px;height:700px;background:radial-gradient(circle,rgba(118,210,21,.06) 0%,transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;width:100%}
+.hero-breadcrumb{font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.08em;margin-bottom:24px;display:flex;align-items:center;gap:8px;animation:fadeUp .5s ease both}
+.hero-breadcrumb a{color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.hero-breadcrumb a:hover{color:var(--green)}
+.hero-breadcrumb span{color:rgba(255,255,255,.45)}
+.hero h1{font-family:var(--serif);font-size:clamp(1.9rem,3vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--white);margin-bottom:24px;animation:fadeUp .6s .1s ease both}
+.hero h1 .accent{color:var(--green)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.8;font-weight:300;max-width:480px;margin-bottom:40px;animation:fadeUp .6s .2s ease both}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:3px;animation:fadeUp .7s .4s ease both}
+.stat-box{background:var(--black-mid);border:1px solid rgba(255,255,255,.06);padding:28px 24px;position:relative;overflow:hidden}
+.stat-box::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--green)}
+.stat-num{font-family:var(--serif);font-size:2rem;font-weight:800;color:var(--green);line-height:1;margin-bottom:8px}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.5;font-weight:300}
+.pain{background:var(--white);padding:100px 60px}
+.pain-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.pain-title{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:var(--black);margin-bottom:20px}
+.pain-sub{font-size:1rem;color:var(--grey-mid);line-height:1.8;font-weight:300;margin-bottom:36px}
+.rating-visual{background:var(--grey-light);border-radius:8px;padding:32px;border-left:4px solid #ff4444}
+.rating-label{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:20px}
+.rating-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rating-cat{font-size:.78rem;color:var(--grey-mid);width:130px;flex-shrink:0}
+.rating-bar-bg{flex:1;height:7px;background:rgba(0,0,0,.08);border-radius:4px;overflow:hidden}
+.rating-bar{height:100%;border-radius:4px;transition:width 1.5s ease}
+.rating-bar.bad{background:linear-gradient(90deg,#ff4444,#ff6b6b)}
+.rating-bar.mid{background:linear-gradient(90deg,#ff9944,#ffbb44)}
+.rating-score{font-size:.78rem;font-weight:700;width:24px;text-align:right;flex-shrink:0}
+.rating-score.bad{color:#ff4444}.rating-score.mid{color:#ff9944}
+.rating-divider{height:1px;background:rgba(0,0,0,.08);margin:20px 0}
+.rating-diprom-row{display:flex;align-items:center;justify-content:space-between}
+.rating-diprom-label{font-size:.9rem;font-weight:600;color:var(--black)}
+.rating-diprom-val{font-family:var(--serif);font-size:1.8rem;font-weight:800;color:var(--green)}
+.pain-points{display:flex;flex-direction:column;gap:3px}
+.pain-point{background:var(--grey-light);padding:24px 28px;display:flex;gap:16px;align-items:flex-start;border-left:3px solid transparent;transition:border-color .3s}
+.pain-point:hover{border-left-color:#ff6b6b}
+.pain-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.pain-point-title{font-size:.9rem;font-weight:600;color:var(--black);margin-bottom:6px}
+.pain-point-text{font-size:.83rem;color:var(--grey-mid);line-height:1.65}
+.promise{background:var(--black-deep);padding:100px 60px;position:relative;overflow:hidden}
+.promise-glow{position:absolute;top:-200px;left:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(118,210,21,.06) 0%,transparent 65%);pointer-events:none}
+.promise-head{text-align:center;max-width:700px;margin:0 auto 70px;position:relative;z-index:2}
+.promise-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:20px}
+.promise-sub{font-size:1rem;color:rgba(255,255,255,.5);line-height:1.8;font-weight:300}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;position:relative;z-index:2}
+.promise-card{background:var(--black-mid);border:1px solid rgba(255,255,255,.05);padding:44px 36px;transition:all .3s;position:relative;overflow:hidden}
+.promise-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--neon));transform:scaleX(0);transition:transform .4s}
+.promise-card:hover{border-color:rgba(118,210,21,.2);background:rgba(118,210,21,.04);transform:translateY(-4px)}
+.promise-card:hover::after{transform:scaleX(1)}
+.promise-card-icon{font-size:1.8rem;margin-bottom:24px}
+.promise-card-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.3}
+.promise-card-text{font-size:.87rem;color:rgba(255,255,255,.45);line-height:1.8;font-weight:300}
+.promise-highlight{margin-top:16px;padding:12px 16px;background:rgba(118,210,21,.08);border:1px solid rgba(118,210,21,.2);border-radius:3px;font-size:.8rem;color:var(--green);font-weight:500;line-height:1.5}
+.case{background:var(--grey-light);padding:100px 60px}
+.case-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.case-timeline-title{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:28px;display:flex;align-items:center;gap:10px}
+.case-timeline-title::before{content:'';width:20px;height:1px;background:var(--green)}
+.timeline{display:flex;flex-direction:column;gap:0}
+.timeline-item{display:flex;gap:20px;position:relative}
+.timeline-item:not(:last-child)::after{content:'';position:absolute;left:19px;top:44px;bottom:0;width:2px;background:rgba(118,210,21,.15)}
+.timeline-dot{width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px;position:relative;z-index:1;box-shadow:0 0 10px rgba(118,210,21,.5)}
+.timeline-line-wrap{display:flex;flex-direction:column;align-items:center;padding-top:4px}
+.timeline-content{flex:1;padding-bottom:28px}
+.timeline-day{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.timeline-title{font-size:.9rem;font-weight:600;color:var(--black);margin-bottom:6px}
+.timeline-text{font-size:.82rem;color:var(--grey-mid);line-height:1.65}
+.timeline-tag{display:inline-block;margin-top:8px;background:rgba(118,210,21,.1);border:1px solid rgba(118,210,21,.2);padding:3px 10px;font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--green);border-radius:3px}
+.case-right{display:flex;flex-direction:column;gap:3px}
+.case-right-title{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:var(--black);margin-bottom:12px}
+.case-right-sub{font-size:1rem;color:var(--grey-mid);line-height:1.8;font-weight:300;margin-bottom:28px}
+.principle-card{background:var(--white);padding:24px 28px;border-left:3px solid var(--green);transition:all .3s}
+.principle-card:hover{transform:translateX(4px);box-shadow:4px 0 20px rgba(118,210,21,.1)}
+.principle-title{font-size:.9rem;font-weight:600;color:var(--black);margin-bottom:8px}
+.principle-text{font-size:.83rem;color:var(--grey-mid);line-height:1.65}
+.proactive{background:var(--black-mid);padding:100px 60px}
+.proactive-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:70px}
+.proactive-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
+.proactive-card{background:var(--black-deep);border:1px solid rgba(255,255,255,.05);padding:40px 34px;transition:all .3s}
+.proactive-card:hover{border-color:rgba(118,210,21,.2);background:rgba(118,210,21,.03);transform:translateY(-3px)}
+.proactive-card-tag{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.proactive-card-tag::before{content:'';width:14px;height:1px;background:var(--green)}
+.proactive-card-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:14px;line-height:1.3}
+.proactive-card-text{font-size:.87rem;color:rgba(255,255,255,.45);line-height:1.8;font-weight:300}
+.proactive-card-example{margin-top:20px;padding:14px 18px;background:rgba(118,210,21,.07);border:1px solid rgba(118,210,21,.15);border-radius:3px}
+.proactive-card-example-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.proactive-card-example-text{font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.6;font-style:italic}
+.portal{background:var(--white);padding:100px 60px}
+.portal-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+.portal-mockup{background:var(--black-deep);border-radius:12px;overflow:hidden;border:1px solid rgba(118,210,21,.15);position:relative}
+.portal-mockup::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--neon),transparent)}
+.portal-bar{background:var(--black-mid);padding:14px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.05)}
+.portal-dots{display:flex;gap:6px}
+.portal-dot-ui{width:8px;height:8px;border-radius:50%}
+.portal-dot-ui:nth-child(1){background:#ff5f57}.portal-dot-ui:nth-child(2){background:#febc2e}.portal-dot-ui:nth-child(3){background:#28c840}
+.portal-url{flex:1;background:rgba(255,255,255,.05);border-radius:4px;padding:5px 12px;font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.04em}
+.portal-content{padding:24px}
+.portal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.portal-header-title{font-size:.78rem;font-weight:600;color:var(--white)}
+.portal-badge{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:3px;background:rgba(118,210,21,.15);color:var(--green);border:1px solid rgba(118,210,21,.3)}
+.portal-update{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:16px;margin-bottom:8px;transition:border-color .3s}
+.portal-update:hover{border-color:rgba(118,210,21,.2)}
+.portal-update-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.portal-update-date{font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.06em}
+.portal-update-status{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px}
+.portal-update-status.new{background:rgba(118,210,21,.15);color:var(--green)}
+.portal-update-status.progress{background:rgba(255,170,0,.12);color:#ffaa00}
+.portal-update-status.done{background:rgba(40,200,64,.12);color:#28c840}
+.portal-update-title{font-size:.8rem;font-weight:500;color:var(--white);margin-bottom:4px}
+.portal-update-text{font-size:.72rem;color:rgba(255,255,255,.55);line-height:1.5}
+.portal-footer{border-top:1px solid rgba(255,255,255,.05);padding-top:16px;display:flex;align-items:center;justify-content:space-between}
+.portal-footer-text{font-size:.75rem;color:rgba(255,255,255,.45)}
+.portal-footer-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:dotPulse 2s ease-in-out infinite}
+@keyframes dotPulse{0%,100%{box-shadow:0 0 6px rgba(118,210,21,.5)}50%{box-shadow:0 0 14px rgba(118,210,21,.9)}}
+.sla{background:var(--grey-light);padding:100px 60px}
+.sla-head{text-align:center;max-width:600px;margin:0 auto 60px}
+.sla-head-title{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:var(--black);margin-bottom:16px}
+.sla-head-sub{font-size:1rem;color:var(--grey-mid);line-height:1.8;font-weight:300}
+.sla-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.sla-card{background:var(--white);padding:36px 28px;border-top:3px solid transparent;text-align:center;transition:all .3s}
+.sla-card:hover{border-top-color:var(--green);transform:translateY(-4px)}
+.sla-num{font-family:var(--serif);font-size:2.8rem;font-weight:800;color:var(--green);line-height:1;margin-bottom:8px}
+.sla-unit{font-size:.75rem;font-weight:600;color:var(--grey-mid);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.sla-label{font-size:.85rem;font-weight:600;color:var(--black);margin-bottom:8px}
+.sla-sub{font-size:.78rem;color:var(--grey-mid);line-height:1.5}
+.steps-section{background:var(--black-deep);padding:100px 60px}
+.steps-head{text-align:center;max-width:600px;margin:0 auto 70px}
+.steps-head-title{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:16px}
+.steps-head-sub{font-size:1rem;color:rgba(255,255,255,.5);line-height:1.8;font-weight:300}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:36px;left:calc(16.67% + 18px);right:calc(16.67% + 18px);height:1px;background:linear-gradient(90deg,var(--green),var(--neon),var(--green));opacity:.3;pointer-events:none}
+.step-item{background:var(--black-mid);border:1px solid rgba(255,255,255,.05);padding:44px 36px;text-align:center;transition:all .3s;position:relative}
+.step-item:hover{border-color:rgba(118,210,21,.2);transform:translateY(-4px)}
+.step-circle{width:52px;height:52px;border-radius:50%;background:rgba(118,210,21,.1);border:2px solid rgba(118,210,21,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--serif);font-size:1.2rem;font-weight:800;color:var(--green);transition:all .3s}
+.step-item:hover .step-circle{background:rgba(118,210,21,.2);border-color:var(--green);box-shadow:0 0 20px rgba(118,210,21,.3)}
+.step-title{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:12px}
+.step-text{font-size:.87rem;color:rgba(255,255,255,.45);line-height:1.75;font-weight:300}
+.step-time{margin-top:16px;font-size:.72rem;font-weight:600;color:var(--green);letter-spacing:.08em;text-transform:uppercase}
+.faq{background:var(--white);padding:100px 60px}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-head{text-align:center;margin-bottom:60px}
+.faq-head-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--black);margin-bottom:16px}
+.faq-head-sub{font-size:1rem;color:var(--grey-mid);line-height:1.8;font-weight:300}
+.faq-item{border-bottom:1px solid rgba(0,0,0,.08)}
+.faq-question{display:flex;align-items:center;justify-content:space-between;padding:24px 0;cursor:pointer;gap:20px;user-select:none}
+.faq-q-text{font-size:.95rem;font-weight:600;color:var(--black);line-height:1.4;transition:color .2s}
+.faq-item.open .faq-q-text{color:var(--green)}
+.faq-icon{width:28px;height:28px;border-radius:50%;border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;color:var(--grey-mid);font-size:.9rem}
+.faq-item.open .faq-icon{background:var(--green);border-color:var(--green);color:var(--black);transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-answer-inner{font-size:.9rem;color:var(--grey-mid);line-height:1.8;padding-bottom:24px;font-weight:300}
+.faq-item.open .faq-answer{max-height:300px}
+.quote-section{background:var(--green);padding:80px 60px;text-align:center;position:relative;overflow:hidden}
+.quote-section::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(0,0,0,.03) 20px,rgba(0,0,0,.03) 21px);pointer-events:none}
+.quote-mark{font-family:var(--serif);font-size:6rem;line-height:.5;color:rgba(0,0,0,.5);margin-bottom:0;position:relative;z-index:2}
+.quote-text{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--black);line-height:1.3;letter-spacing:-.01em;max-width:800px;margin:0 auto 24px;position:relative;z-index:2}
+.quote-author{display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:2}
+.quote-author-photo{width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid rgba(0,0,0,.55)}
+.quote-author-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.quote-author-name{font-size:.85rem;font-weight:600;color:var(--black)}
+.quote-author-role{font-size:.75rem;color:rgba(0,0,0,.5)}
+.cta-section{background:var(--black-deep);padding:100px 60px}
+.cta-inner{background:var(--black-mid);border:1px solid rgba(118,210,21,.15);border-radius:8px;padding:80px;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;position:relative;overflow:hidden;max-width:1100px;margin:0 auto}
+.cta-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--neon),transparent)}
+.cta-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.cta-eyebrow::before{content:'';width:20px;height:1px;background:var(--green)}
+.cta-title{font-family:var(--serif);font-size:2rem;font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.45);line-height:1.75;font-weight:300;max-width:460px}
+.cta-actions{display:flex;flex-direction:column;gap:12px;flex-shrink:0;min-width:210px}
+.cta-note{font-size:.72rem;color:rgba(255,255,255,.5);text-align:center;margin-top:4px}
+footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.1);padding:44px 60px;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{font-family:var(--serif);font-size:1.3rem;font-weight:800;color:var(--white);letter-spacing:-.02em}
+.footer-logo span{color:var(--green)}
+.footer-claim{font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.08em;margin-top:4px}
+.footer-links{display:flex;gap:30px;list-style:none}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.45)}
+.rating-disclaimer{display:flex;gap:12px;align-items:flex-start;margin-top:20px;padding:16px 18px;background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);border-radius:6px}
+.rating-disclaimer-icon{flex-shrink:0;width:20px;height:20px;border-radius:50%;background:rgba(107,114,128,.15);display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--grey-mid);margin-top:1px}
+.rating-disclaimer p{font-size:.72rem;color:var(--grey-mid);line-height:1.65}
+.pain-score{display:inline-block;margin-left:8px;font-size:.75rem;font-weight:700;color:#ff6b6b;background:rgba(255,68,68,.08);border:1px solid rgba(255,68,68,.15);padding:1px 7px;border-radius:3px;vertical-align:middle}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(max-width:960px){
+  nav{padding:0 20px}.nav-links{display:none}
+  .hero{padding:110px 20px 70px;min-height:auto}
+  .hero-inner,.pain-inner,.case-inner,.portal-inner,.proactive-head{grid-template-columns:1fr;gap:48px}
+  .hero-stats,.promise-grid,.proactive-grid,.sla-grid,.steps-grid{grid-template-columns:1fr 1fr}
+  .cta-inner{grid-template-columns:1fr;padding:48px 28px;gap:36px}
+  .pain,.promise,.case,.proactive,.portal,.sla,.steps-section,.faq,.cta-section{padding:70px 20px}
+  .quote-section{padding:60px 20px}
+  footer{flex-direction:column;gap:20px;padding:36px 20px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+  .steps-grid::before{display:none}
+}
+@media(max-width:520px){.hero-stats,.promise-grid,.proactive-grid,.sla-grid,.steps-grid{grid-template-columns:1fr}.hero h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="diprom-v4.html" class="nav-logo">di<span>prom</span></a>
+  <ul class="nav-links">
+    <li><a href="#versprechen">Unser Versprechen</a></li>
+    <li><a href="#transparenz">Transparenz</a></li>
+    <li><a href="#einstieg">Einstieg</a></li>
+    <li><a href="#kontakt" class="nav-cta">Gespräch vereinbaren</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb"><a href="diprom-v4.html">Startseite</a><span>/</span>Eigentümer & WEG</div>
+      <h1>Sie verdienen eine Verwaltung,<br>die <span class="accent">wirklich erreichbar</span> ist.</h1>
+      <p class="hero-sub">Hausverwaltungen werden von Eigentümern im Schnitt mit einer 4 bewertet – meistens wegen fehlender Kommunikation und mangelnder Transparenz. diprom bricht mit diesem Muster. Konsequent.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch</a>
+        <a href="#versprechen" class="btn-ghost">Unser Versprechen</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="stat-num">85%</div>
+        <div class="stat-label">aller Anfragen beantwortet diprom innerhalb von 1 Stunde – KI-gestützt</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">24h</div>
+        <div class="stat-label">Maximale Reaktionszeit für alle verbleibenden Anfragen – garantiert</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">Mindestens zwei Status-Updates pro Woche bei laufenden Vorgängen</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Transparenz über jeden Vorgang – jederzeit im Eigentümerportal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<div class="pain">
+  <div class="pain-inner">
+    <div class="reveal">
+      <div class="eyebrow">Das Problem</div>
+      <h2 class="pain-title">Was Eigentümer wirklich stört.</h2>
+      <p class="pain-sub">Wir haben die öffentlichen Bewertungen von WEG-Verwaltungen in Deutschland analysiert – Google, Trustpilot, golocal. Das Ergebnis ist eindeutig: Bewertet wird vor allem dann, wenn etwas schiefläuft. Die Kritikpunkte wiederholen sich.</p>
+      
+      <div class="rating-visual">
+        <div class="rating-label">Kritikpunkte WEG-Verwaltungen – öffentliche Bewertungsportale</div>
+        <div class="rating-row">
+          <div class="rating-cat">Erreichbarkeit</div>
+          <div class="rating-bar-bg"><div class="rating-bar bad" style="width:0%" data-width="24%"></div></div>
+          <div class="rating-score bad">1,2</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-cat">Transparenz</div>
+          <div class="rating-bar-bg"><div class="rating-bar bad" style="width:0%" data-width="28%"></div></div>
+          <div class="rating-score bad">1,4</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-cat">Abrechnung</div>
+          <div class="rating-bar-bg"><div class="rating-bar bad" style="width:0%" data-width="30%"></div></div>
+          <div class="rating-score bad">1,5</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-cat">Schadensmanagement</div>
+          <div class="rating-bar-bg"><div class="rating-bar bad" style="width:0%" data-width="32%"></div></div>
+          <div class="rating-score bad">1,6</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-cat">Beschlussumsetzung</div>
+          <div class="rating-bar-bg"><div class="rating-bar mid" style="width:0%" data-width="36%"></div></div>
+          <div class="rating-score mid">1,8</div>
+        </div>
+        <div class="rating-divider"></div>
+        <div class="rating-diprom-row">
+          <div class="rating-diprom-label">diprom – unser Anspruch</div>
+          <div class="rating-diprom-val">5,0 ✓</div>
+        </div>
+      </div>
+      
+      <div class="rating-disclaimer">
+        <div class="rating-disclaimer-icon">ℹ</div>
+        <p>Die dargestellten Werte sind abgeleitete Heuristiken, keine offiziellen Plattformwerte. Sie basieren auf wiederkehrenden Beschwerde-Clustern aus öffentlichen Bewertungsportalen (Google Reviews, Trustpilot, golocal) und Praxisstudien zur WEG-Verwaltung in Deutschland. Einzelne Plattformen veröffentlichen keine kategorisierten Durchschnittswerte. Aussagekraft: ~70% Konfidenz für Rangfolge und grobe Größenordnung. <strong>Quellen:</strong> Öffentliche Rezensionen großer Verwaltungsgesellschaften auf Google Maps &amp; Trustpilot (2023–2024); DDIV Branchenreport Wohnungsverwaltung; Praxisratgeber WEG-Verwaltung (Haufe Verlag).</p>
+      </div>
+    </div>
+    
+    <div class="pain-points reveal d2">
+      <div class="pain-point">
+        <div class="pain-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div>
+        <div>
+          <div class="pain-point-title">Erreichbarkeit & Reaktionszeit <span class="pain-score">Ø 1,2 / 5</span></div>
+          <p class="pain-point-text">Telefonisch nicht durchkommen, keine Rückrufe, Mails bleiben tagelang liegen. „Niemand fühlt sich zuständig" – der häufigste Einzelsatz in WEG-Bewertungen.</p>
+        </div>
+      </div>
+      <div class="pain-point">
+        <div class="pain-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span></div>
+        <div>
+          <div class="pain-point-title">Abrechnung & Auszahlung <span class="pain-score">Ø 1,5 / 5</span></div>
+          <p class="pain-point-text">Nebenkostenabrechnung kommt spät oder fehlerhaft. Guthaben und Kautionen verzögern sich. Rückfragen laufen ins Leere. Ein direkter Vertrauensbruch.</p>
+        </div>
+      </div>
+      <div class="pain-point">
+        <div class="pain-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div>
+        <div>
+          <div class="pain-point-title">Transparenz & Kostensteuerung <span class="pain-score">Ø 1,4 / 5</span></div>
+          <p class="pain-point-text">Nachforderungen ohne saubere Belegeinsicht, unklare Kostenpositionen, „überzogene Rechnungen" ohne Erklärung. Eigentümer fühlen sich im Dunkeln gelassen.</p>
+        </div>
+      </div>
+      <div class="pain-point">
+        <div class="pain-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></div>
+        <div>
+          <div class="pain-point-title">Instandhaltung & Schadensmanagement <span class="pain-score">Ø 1,6 / 5</span></div>
+          <p class="pain-point-text">Mängel werden nicht nachverfolgt, Handwerker träge gesteuert, kaum Statusinfos. Aufzug, Heizung, Alltagsmängel – das Desinteresse ist spürbar.</p>
+        </div>
+      </div>
+      <div class="pain-point">
+        <div class="pain-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span></div>
+        <div>
+          <div class="pain-point-title">Beschlussumsetzung & Projekte <span class="pain-score">Ø 1,8 / 5</span></div>
+          <p class="pain-point-text">Beschlüsse aus Eigentümerversammlungen werden nicht konsequent umgesetzt. Baumaßnahmen verzögern sich. Was beschlossen wurde, verschwindet in der Schublade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROMISE -->
+<section class="promise" id="versprechen">
+  <div class="promise-glow"></div>
+  <div class="promise-head reveal">
+    <div class="eyebrow center">Unser Versprechen</div>
+    <h2 class="promise-title">Wir kommunizieren auch dann,<br>wenn sich nichts verändert hat.</h2>
+    <p class="promise-sub">Das klingt selbstverständlich. Ist es aber nicht. Wir haben es zum Standard gemacht – weil Eigentümer das Recht haben zu wissen, wo ihr Anliegen gerade steht.</p>
+  </div>
+  <div class="promise-grid">
+    <div class="promise-card reveal">
+      <div class="promise-card-icon"></div>
+      <h3 class="promise-card-title">85% aller Anfragen in unter 1 Stunde</h3>
+      <p class="promise-card-text">Da wir Vorgänge KI-gestützt vorbereiten und Menschen die Freigabe geben, können wir deutlich schneller reagieren als klassische Verwaltungen. 85% aller Anfragen werden innerhalb einer Stunde beantwortet.</p>
+      <div class="promise-highlight">Die restlichen 15% innerhalb von 24 Stunden – garantiert.</div>
+    </div>
+    <div class="promise-card reveal d1">
+      <div class="promise-card-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div>
+      <h3 class="promise-card-title">Proaktive Kommunikation – immer</h3>
+      <p class="promise-card-text">Sie warten nicht auf Antworten – wir kommen auf Sie zu. Bei jedem laufenden Vorgang erhalten Sie regelmäßige Updates über das Eigentümerportal, auch wenn sich noch nichts verändert hat.</p>
+      <div class="promise-highlight">„Ihr Vorgang läuft. Nächster Update folgt bis Freitag."</div>
+    </div>
+    <div class="promise-card reveal d2">
+      <div class="promise-card-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span></div>
+      <h3 class="promise-card-title">Vollständige Transparenz</h3>
+      <p class="promise-card-text">Jeder Vorgang ist im Eigentümerportal einsehbar – mit Status, Zuständigkeit und Zeitstempel. Sie sehen, was passiert, wer dran ist und wann es abgeschlossen wird.</p>
+      <div class="promise-highlight">24/7 Zugang zu allen laufenden Vorgängen.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY WASSERSCHADEN -->
+<section class="case" id="transparenz">
+  <div class="case-inner">
+    <div class="reveal">
+      <div class="case-timeline-title">Beispiel: Wasserschaden</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-line-wrap"><div class="timeline-dot"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-day">Tag 1 · Montag</div>
+            <div class="timeline-title">Schadensmeldung eingetroffen</div>
+            <p class="timeline-text">Mieter meldet Wasserschaden über das Portal. Automatische Bestätigung geht binnen Minuten raus. Vorgang wird angelegt, Handwerker kontaktiert.</p>
+            <span class="timeline-tag">KI · Sofortreaktion</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-line-wrap"><div class="timeline-dot"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-day">Tag 2 · Dienstag</div>
+            <div class="timeline-title">Status-Update an alle Beteiligten</div>
+            <p class="timeline-text">Eigentümer und Mieter erhalten ein Update: Handwerker kommt Donnerstag, Versicherung wurde informiert. Nächster Update: Freitag.</p>
+            <span class="timeline-tag">Proaktiv · Kein Nachfragen nötig</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-line-wrap"><div class="timeline-dot"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-day">Tag 4 · Donnerstag</div>
+            <div class="timeline-title">Handwerker vor Ort – Update folgt sofort</div>
+            <p class="timeline-text">Noch am selben Tag: Befund liegt vor, Reparatur dauert ca. 5 Tage. Versicherungsbeleg wird vorbereitet. Alle Beteiligten sofort informiert.</p>
+            <span class="timeline-tag">Transparent · Kein Informationsvakuum</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-line-wrap"><div class="timeline-dot"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-day">Tag 7 · Freitag</div>
+            <div class="timeline-title">Wöchentlicher Status – auch ohne Neuigkeiten</div>
+            <p class="timeline-text">Reparatur läuft planmäßig. Kein neuer Status – aber Eigentümer und Mieter bekommen trotzdem ein kurzes Update: „Alles im Plan. Fertig bis Dienstag."</p>
+            <span class="timeline-tag">Immer informiert · Auch wenn nichts Neues passiert</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-line-wrap"><div class="timeline-dot"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-day">Tag 10 · Dienstag</div>
+            <div class="timeline-title">Vorgang abgeschlossen + Versicherungserstattung</div>
+            <p class="timeline-text">Reparatur fertig, Dokumentation komplett. diprom hat proaktiv die Versicherungserstattung durchgesetzt – ohne dass der Eigentümer nachfragen musste.</p>
+            <span class="timeline-tag">Proaktiv · Mehrwert für den Eigentümer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="case-right reveal d2">
+      <div class="eyebrow">Unser Prinzip</div>
+      <h2 class="case-right-title">So arbeiten wir. Immer.</h2>
+      <p class="case-right-sub">Das Wasserschaden-Beispiel steht für unsere gesamte Arbeitsweise – bei jedem Vorgang, jeder Anfrage, jeder Abrechnung.</p>
+      <div class="principle-card">
+        <div class="principle-title">Kein Informationsvakuum</div>
+        <p class="principle-text">Jeder Vorgang hat einen Status, einen Verantwortlichen und einen nächsten Schritt – und Sie kennen ihn jederzeit.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-title">Auch ohne Neuigkeiten kommunizieren</div>
+        <p class="principle-text">Wenn sich nichts verändert hat, sagen wir das. Kurz, klar, verlässlich. Denn Stille ist das Schlimmste, was eine Verwaltung bieten kann.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-title">Proaktiv statt reaktiv</div>
+        <p class="principle-text">Wir warten nicht darauf, dass Sie fragen. Wir denken mit – bei Versicherungsschäden, Vertragsthemen und überall dort, wo wir für Sie mehr herausholen können.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROAKTIV -->
+<section class="proactive">
+  <div class="proactive-head">
+    <div>
+      <div class="eyebrow reveal">Proaktive Beratung</div>
+      <h2 class="reveal d1" style="font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:20px">Wir denken mit.<br>Bevor Sie fragen.</h2>
+    </div>
+    <p class="section-intro light reveal d2" style="color:rgba(255,255,255,.5)">Gute Verwaltung bedeutet nicht nur reagieren – sondern vorausdenken. Dort wo wir für Eigentümer und Mieter mehr herausholen können, handeln wir von uns aus.</p>
+  </div>
+  <div class="proactive-grid">
+    <div class="proactive-card reveal">
+      <div class="proactive-card-tag">Versicherungsschäden</div>
+      <h3 class="proactive-card-title">Wir kämpfen für Ihre Erstattung</h3>
+      <p class="proactive-card-text">Bei Versicherungsschäden lassen wir nichts liegen. Wir begleiten den gesamten Prozess administrativ – Dokumentation, Kommunikation mit der Versicherung, Nachverfolgung – bis die Erstattung auf Ihrem Konto ist.</p>
+      <div class="proactive-card-example">
+        <div class="proactive-card-example-label">Typisches Szenario</div>
+        <p class="proactive-card-example-text">„Der Wasserschaden wurde durch die Versicherung zunächst nur teilweise erstattet. diprom hat Widerspruch eingelegt und die vollständige Erstattung durchgesetzt – ohne dass der Eigentümer eingreifen musste."</p>
+      </div>
+    </div>
+    <div class="proactive-card reveal d1">
+      <div class="proactive-card-tag">Vertragsmanagement</div>
+      <h3 class="proactive-card-title">Optimierung ohne Nachfragen</h3>
+      <p class="proactive-card-text">Auslaufende Wartungsverträge, überhöhte Dienstleisterpreise, fehlende Klauseln – wir behalten den Überblick und handeln proaktiv, bevor Kosten entstehen.</p>
+      <div class="proactive-card-example">
+        <div class="proactive-card-example-label">Typisches Szenario</div>
+        <p class="proactive-card-example-text">„Drei Monate vor Ablauf des Hausmeistervertrags hat diprom Alternativangebote eingeholt und dem Eigentümer eine Empfehlung mit Kostenvergleich präsentiert."</p>
+      </div>
+    </div>
+    <div class="proactive-card reveal d2">
+      <div class="proactive-card-tag">Nebenkostenabrechnung</div>
+      <h3 class="proactive-card-title">Korrekt, vollständig, pünktlich</h3>
+      <p class="proactive-card-text">Nebenkostenabrechnungen sind eine häufige Quelle von Konflikten. Wir erstellen sie strukturiert, nachvollziehbar und fristgerecht – und beantworten Rückfragen von Mietern schnell und professionell.</p>
+      <div class="proactive-card-example">
+        <div class="proactive-card-example-label">Typisches Szenario</div>
+        <p class="proactive-card-example-text">„Ein Mieter hatte eine offene Frage zur Abrechnung. diprom hat diese innerhalb von 48h mit vollständiger Aufschlüsselung beantwortet – der Mieter verlängerte seinen Vertrag."</p>
+      </div>
+    </div>
+    <div class="proactive-card reveal d3">
+      <div class="proactive-card-tag">Dokumentation & Compliance</div>
+      <h3 class="proactive-card-title">Alles geordnet. Nichts vergessen.</h3>
+      <p class="proactive-card-text">Fristen, Protokolle, Beschlüsse, Wartungsnachweise – wir führen alle relevanten Unterlagen digital und vollständig. So sind Sie bei Prüfungen, Verkäufen und Streitfällen jederzeit abgesichert.</p>
+      <div class="proactive-card-example">
+        <div class="proactive-card-example-label">Typisches Szenario</div>
+        <p class="proactive-card-example-text">„Bei einem geplanten Immobilienverkauf waren alle relevanten Unterlagen innerhalb von 24h vollständig digital verfügbar – kein Nachsuchen, kein Verzug."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL MOCKUP -->
+<section class="portal" id="portal">
+  <div class="portal-inner">
+    <div class="reveal">
+      <div class="eyebrow">Eigentümerportal</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--black);margin-bottom:20px">Ihr Eigentum.<br>Immer im Blick.</h2>
+      <p style="font-size:1rem;color:var(--grey-mid);line-height:1.8;font-weight:300;margin-bottom:20px">Alle Vorgänge, Dokumente und Updates an einem Ort – jederzeit zugänglich, auf jedem Gerät. Kein Nachfragen. Kein Rätselraten. Volle Kontrolle.</p>
+      <p style="font-size:1rem;color:var(--grey-mid);line-height:1.8;font-weight:300;margin-bottom:40px">Das Portal ist Ihr direkter Draht zu diprom. Sie sehen in Echtzeit, was mit Ihrer Immobilie passiert – und können jederzeit Anfragen stellen.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#kontakt" class="btn-primary">Portal kennenlernen</a>
+        <a href="#kontakt" class="btn-ghost-dark">Fragen stellen</a>
+      </div>
+    </div>
+    <div class="portal-mockup reveal d2">
+      <div class="portal-bar">
+        <div class="portal-dots">
+          <div class="portal-dot-ui"></div><div class="portal-dot-ui"></div><div class="portal-dot-ui"></div>
+        </div>
+        <div class="portal-url">eigentuemerportal.diprom.io</div>
+        <div style="font-size:.75rem;color:rgba(255,255,255,.5)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> sicher</div>
+      </div>
+      <div class="portal-content">
+        <div class="portal-header">
+          <div class="portal-header-title">Meine Vorgänge – Musterstraße 12</div>
+          <div class="portal-badge">3 aktiv</div>
+        </div>
+        <div class="portal-update">
+          <div class="portal-update-meta">
+            <div class="portal-update-date">Heute · 09:14 Uhr</div>
+            <div class="portal-update-status new">Neu</div>
+          </div>
+          <div class="portal-update-title">Wasserschaden EG links – Update #4</div>
+          <p class="portal-update-text">Reparatur läuft planmäßig. Fertigstellung bis Dienstag. Versicherungsdokumentation vollständig eingereicht.</p>
+        </div>
+        <div class="portal-update">
+          <div class="portal-update-meta">
+            <div class="portal-update-date">Gestern · 16:30 Uhr</div>
+            <div class="portal-update-status progress">In Bearbeitung</div>
+          </div>
+          <div class="portal-update-title">Nebenkostenabrechnung 2024 – Prüfung</div>
+          <p class="portal-update-text">Unterlagen vollständig. Abrechnung wird geprüft, Fertigstellung bis 28.02.</p>
+        </div>
+        <div class="portal-update">
+          <div class="portal-update-meta">
+            <div class="portal-update-date">15.02. · 11:00 Uhr</div>
+            <div class="portal-update-status done">Abgeschlossen</div>
+          </div>
+          <div class="portal-update-title">Hausmeistervertrag – Verlängerung</div>
+          <p class="portal-update-text">Neuer Vertrag mit 8% Kostenersparnis abgeschlossen. Dokument im Archiv.</p>
+        </div>
+        <div class="portal-footer">
+          <div class="portal-footer-text">Zuletzt aktualisiert: heute, 09:14</div>
+          <div class="portal-footer-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLA GARANTIEN -->
+<section class="sla">
+  <div class="sla-head reveal">
+    <div class="eyebrow center">Unsere Garantien</div>
+    <h2 class="sla-head-title">Was Sie von diprom erwarten dürfen.</h2>
+    <p class="sla-head-sub">Keine leeren Versprechen. Konkrete Zusagen, an denen wir uns messen lassen.</p>
+  </div>
+  <div class="sla-grid">
+    <div class="sla-card reveal">
+      <div class="sla-num">85%</div>
+      <div class="sla-unit">in 1 Stunde</div>
+      <div class="sla-label">KI-gestützte Reaktion</div>
+      <p class="sla-sub">85% aller Anfragen werden durch KI-Vorbereitung innerhalb einer Stunde beantwortet.</p>
+    </div>
+    <div class="sla-card reveal d1">
+      <div class="sla-num">24h</div>
+      <div class="sla-unit">Maximum</div>
+      <div class="sla-label">Garantierte Reaktionszeit</div>
+      <p class="sla-sub">Für alle verbleibenden Anfragen gilt: 24 Stunden – ohne Ausnahme.</p>
+    </div>
+    <div class="sla-card reveal d2">
+      <div class="sla-num">2×</div>
+      <div class="sla-unit">pro Woche</div>
+      <div class="sla-label">Mindest-Updates bei Vorgängen</div>
+      <p class="sla-sub">Auch wenn sich nichts verändert hat. Sie bleiben immer informiert.</p>
+    </div>
+    <div class="sla-card reveal d3">
+      <div class="sla-num">0</div>
+      <div class="sla-unit">Überraschungen</div>
+      <div class="sla-label">Proaktive Kostenkommunikation</div>
+      <p class="sla-sub">Kosten werden immer vorher kommuniziert – keine versteckten Posten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WIE FUNKTIONIERT DER EINSTIEG -->
+<section class="steps-section" id="einstieg">
+  <div class="steps-head reveal">
+    <div class="eyebrow center">Der Weg zu diprom</div>
+    <h2 class="steps-head-title">Was passiert nach Ihrer Anfrage?</h2>
+    <p class="steps-head-sub">Kein komplizierter Wechsel. Kein Chaos. Wir führen Sie Schritt für Schritt durch den Prozess – damit der Übergang reibungslos läuft.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-item reveal">
+      <div class="step-circle">1</div>
+      <div class="step-title">Kostenloses Erstgespräch</div>
+      <p class="step-text">Wir hören zu. Sie schildern uns Ihre Situation – Objekt, aktuelle Verwaltung, was Sie sich wünschen. Kein Pitch, kein Druck. Wir schauen gemeinsam, ob diprom zu Ihnen passt.</p>
+      <div class="step-time">Ca. 30 Minuten</div>
+    </div>
+    <div class="step-item reveal d1">
+      <div class="step-circle">2</div>
+      <div class="step-title">Analyse & Angebot</div>
+      <p class="step-text">Wir analysieren Ihre Unterlagen und erstellen ein transparentes Angebot – mit klaren Leistungen, klaren Kosten und einem Zeitplan für den Übergang. Keine versteckten Gebühren.</p>
+      <div class="step-time">Innerhalb von 5 Werktagen</div>
+    </div>
+    <div class="step-item reveal d2">
+      <div class="step-circle">3</div>
+      <div class="step-title">Nahtloser Start</div>
+      <p class="step-text">Sobald alles besprochen ist, übernehmen wir die Kommunikation mit dem bisherigen Verwalter, richten Ihr Eigentümerportal ein und Sie haben vom ersten Tag an vollen Überblick.</p>
+      <div class="step-time">Übergabe in 4–6 Wochen</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-head reveal">
+      <div class="eyebrow center">Häufige Fragen</div>
+      <h2 class="faq-head-title">Was Eigentümer uns fragen.</h2>
+      <p class="faq-head-sub">Die wichtigsten Antworten – bevor Sie fragen müssen.</p>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Was kostet die Verwaltung durch diprom?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer"><p class="faq-answer-inner">Die Kosten hängen von der Anzahl der Einheiten, dem Objekt und dem gewünschten Leistungsumfang ab. Wir erstellen nach dem Erstgespräch ein transparentes Angebot ohne versteckte Gebühren. Typischerweise liegen wir im marktüblichen Rahmen – bei deutlich höherem Leistungsstandard.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Wie läuft der Wechsel vom bisherigen Verwalter ab?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer"><p class="faq-answer-inner">Wir übernehmen die Kommunikation mit dem bisherigen Verwalter und koordinieren die Übergabe aller relevanten Unterlagen, Konten und Verträge. Der Prozess dauert in der Regel 4–6 Wochen und läuft für Sie weitestgehend im Hintergrund ab. Sie müssen sich um nichts kümmern.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Kümmert sich diprom auch um Vor-Ort-Termine wie WEG-Versammlungen?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer"><p class="faq-answer-inner">Ja. Vor-Ort-Leistungen wie WEG-Versammlungen, Übergaben und Begehungen werden von unseren Partnerunternehmen durchgeführt, die wir steuern und koordinieren. diprom übernimmt die vollständige administrative Vorbereitung und Nachbereitung – Sie haben einen einzigen Ansprechpartner.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Wie kann ich als Eigentümer den aktuellen Stand meiner Vorgänge sehen?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer"><p class="faq-answer-inner">Über Ihr persönliches Eigentümerportal haben Sie jederzeit Zugriff auf alle laufenden Vorgänge, Dokumente, Abrechnungen und Kommunikation. Das Portal ist auf jedem Gerät verfügbar und wird in Echtzeit aktualisiert. Zusätzlich erhalten Sie proaktive Updates – auch wenn Sie nicht aktiv nachschauen.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Was passiert bei einem Notfall außerhalb der Geschäftszeiten?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer"><p class="faq-answer-inner">Für echte Notfälle – Wassereinbruch, Heizungsausfall im Winter, Sicherheitsrisiken – gibt es einen Notfallkanal. Durch unsere automatisierten Prozesse werden dringende Meldungen priorisiert und sofort an die richtigen Ansprechpartner weitergeleitet.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Wie geht diprom mit sensiblen Eigentümer- und Mieterdaten um?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer"><p class="faq-answer-inner">Datenschutz und Rechtssicherheit sind fest in unserem Team verankert – nicht zugekauft. Wir arbeiten vollständig DSGVO-konform, alle Daten werden verschlüsselt gespeichert und nur für die Verwaltung Ihrer Objekte verwendet. Unser Softwarerecht-Experte Stephan stellt sicher, dass alle Prozesse rechtlich wasserdicht sind.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section reveal">
+  <div class="quote-mark">"</div>
+  <p class="quote-text">Gute Verwaltung bedeutet nicht, Probleme zu lösen. Es bedeutet, dass Eigentümer gar nicht erst das Gefühl bekommen, eines zu haben.</p>
+  <div class="quote-author">
+    <div class="quote-author-photo"><img src="data:image/jpeg;base64,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" alt="Sebastian" /></div>
+    <div>
+      <div class="quote-author-name">Sebastian</div>
+      <div class="quote-author-role">Gründer & CEO, diprom</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section" id="kontakt">
+  <div class="cta-inner reveal">
+    <div>
+      <div class="cta-eyebrow">Kostenloses Erstgespräch</div>
+      <h2 class="cta-title">Sprechen wir über<br>Ihre Immobilie.</h2>
+      <p class="cta-sub">Ob WEG, Mehrfamilienhaus oder Einzeleigentum – wir schauen uns Ihre Situation an und zeigen Ihnen konkret, was diprom für Sie bedeuten würde. Kein Pitch. Kein Druck.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="mailto:kontakt@diprom.io" class="btn-primary">Jetzt Termin anfragen</a>
+      <a href="diprom-v4.html" class="btn-ghost">Zurück zur Startseite</a>
+      <p class="cta-note">Kostenfrei · Unverbindlich · Vertraulich</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">di<span>prom</span></div>
+    <div class="footer-claim">Digital wo möglich. Persönlich wo nötig.</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">Impressum</a></li>
+    <li><a href="#">Datenschutz</a></li>
+    <li><a href="#">Kontakt</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 diprom GmbH · Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const rObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('[data-width]').forEach(bar=>{setTimeout(()=>{bar.style.width=bar.dataset.width;},200);});rObs.unobserve(e.target);}});},{threshold:0.3});
+document.querySelectorAll('.rating-visual').forEach(el=>rObs.observe(el));
+
+function toggleFaq(q){const item=q.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

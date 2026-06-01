@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- SEO -->
+  <title>diprom – Hausverwaltung digital & persönlich | Moers</title>
+  <meta name="description" content="diprom GmbH aus Moers verbindet KI-gestützte Prozessautomatisierung mit persönlicher Betreuung. Für Eigentümer, Hausverwaltungen und Nachfolgeregelungen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.diprom.io/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.diprom.io/">
+  <meta property="og:title" content="diprom – Digital wo möglich. Persönlich wo nötig.">
+  <meta property="og:description" content="Moderne Hausverwaltung aus Moers. Eigentümerportal, transparente Kommunikation, faire Verwaltungsgebühren.">
+  <meta property="og:image" content="https://www.diprom.io/og-image.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="diprom GmbH">
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="diprom – Digital wo möglich. Persönlich wo nötig.">
+  <meta name="twitter:description" content="Moderne Hausverwaltung aus Moers. Eigentümerportal, transparente Kommunikation, faire Verwaltungsgebühren.">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.diprom.io",
+  "name": "diprom GmbH",
+  "description": "Moderne Hausverwaltung – digital wo möglich, persönlich wo nötig.",
+  "url": "https://www.diprom.io",
+  "telephone": "",
+  "email": "kontakt@diprom.io",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Reichweinstraße 20",
+    "addressLocality": "Moers",
+    "postalCode": "47441",
+    "addressCountry": "DE"
+  },
+  "founder": {"@type": "Person", "name": "Sebastian Reinemann"},
+  "areaServed": "DE",
+  "serviceType": ["Hausverwaltung", "WEG-Verwaltung", "Immobilienverwaltung"],
+  "slogan": "Digital wo möglich. Persönlich wo nötig."
+}</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+:root{
+  --black:#1A1A1A;--black-deep:#0B0F14;--black-mid:#1C222B;
+  --green:#76D215;--neon:#C7FE0B;
+  --white:#FFFFFF;--grey-light:#F5F7FA;--grey-700:#374151;--grey-500:#6B7280;
+  --serif:'Syne',sans-serif;--font:'Montserrat',system-ui,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--black-deep);color:var(--white);overflow-x:hidden}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes gridShift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+@keyframes glowPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(11,15,20,.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(118,210,21,.15)}
+.nav-logo{font-family:var(--serif);font-size:1.5rem;font-weight:800;
+  color:var(--white);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;
+  font-size:.85rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green)!important;color:var(--black)!important;
+  padding:9px 22px;border-radius:3px;font-weight:700!important}
+.nav-cta:hover{background:var(--neon)!important}
+
+/* BUTTONS */
+.btn-primary{display:inline-block;background:var(--green);color:var(--black);
+  padding:14px 28px;font-family:var(--font);font-size:.9rem;font-weight:700;
+  border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-primary:hover{background:var(--neon);transform:translateY(-2px);box-shadow:0 8px 24px rgba(118,210,21,.3)}
+.btn-ghost{display:inline-block;background:transparent;color:rgba(255,255,255,.75);
+  padding:14px 28px;font-family:var(--font);font-size:.9rem;font-weight:500;
+  border:1px solid rgba(255,255,255,.25);border-radius:3px;text-decoration:none;transition:all .2s}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+
+/* EYEBROW */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;
+  font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--green)}
+.eyebrow.center{justify-content:center}
+
+/* ── HERO ── */
+.hero{background:var(--black-deep);padding:140px 60px 100px;position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(118,210,21,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(118,210,21,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none;animation:gridShift 24s linear infinite}
+.hero-glow{position:absolute;top:-150px;right:-150px;width:700px;height:700px;
+  background:radial-gradient(circle,rgba(118,210,21,.08) 0%,transparent 65%);
+  pointer-events:none;animation:glowPulse 7s ease-in-out infinite}
+.hero-inner{position:relative;z-index:2;max-width:1100px;width:100%}
+.hero h1{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:800;
+  line-height:1.04;letter-spacing:-.03em;color:var(--white);margin-bottom:24px;
+  animation:fadeUp .6s .1s ease both}
+.hero h1 .accent{color:var(--green)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;font-weight:400;
+  max-width:560px;margin-bottom:44px;animation:fadeUp .6s .2s ease both}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;animation:fadeUp .6s .3s ease both}
+.hero-stats{display:flex;gap:44px;flex-wrap:wrap;animation:fadeUp .6s .4s ease both}
+.hero-stat-num{font-family:var(--serif);font-size:2rem;font-weight:800;color:var(--green);line-height:1;margin-bottom:6px}
+.hero-stat-label{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.5;font-weight:400}
+.hero-stat-divider{width:1px;background:rgba(255,255,255,.12);align-self:stretch}
+
+/* ── AUDIENCE ── */
+.audience{background:var(--black-mid);padding:100px 60px}
+.audience-head{text-align:center;max-width:580px;margin:0 auto 64px}
+.audience-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;
+  color:var(--white);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.audience-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8;font-weight:400}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;max-width:1200px;margin:0 auto}
+.audience-card{background:var(--black-deep);border:1px solid rgba(255,255,255,.06);
+  padding:44px 36px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
+.audience-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--green),var(--neon));transform:scaleX(0);transition:transform .4s}
+.audience-card:hover{border-color:rgba(118,210,21,.3);transform:translateY(-5px)}
+.audience-card:hover::after{transform:scaleX(1)}
+.audience-card.featured{border-color:rgba(118,210,21,.2);background:rgba(118,210,21,.04)}
+.audience-card.featured::after{transform:scaleX(1)}
+.audience-icon{font-size:2rem;margin-bottom:20px}
+.audience-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:12px}
+.audience-text{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.75;font-weight:400;margin-bottom:20px}
+.audience-link{font-size:.85rem;font-weight:600;color:var(--green)}
+
+/* ── USP BAR ── */
+.usp-bar{background:var(--black-deep);padding:60px;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:1200px;margin:0 auto;background:rgba(255,255,255,.05)}
+.usp-item{background:var(--black-deep);padding:36px 32px;display:flex;align-items:flex-start;gap:18px}
+.usp-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.usp-title{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:6px}
+.usp-text{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:400}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--black-mid);padding:100px 60px}
+.how-head{text-align:center;max-width:600px;margin:0 auto 70px}
+.how-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;
+  color:var(--white);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
+.how-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;max-width:1200px;margin:0 auto;position:relative}
+.how-steps::before{content:'';position:absolute;top:36px;left:calc(16.66% + 18px);right:calc(16.66% + 18px);
+  height:1px;background:linear-gradient(90deg,rgba(118,210,21,.4),rgba(199,254,11,.4),rgba(118,210,21,.4));pointer-events:none}
+.how-step{background:var(--black-deep);border:1px solid rgba(255,255,255,.06);padding:44px 36px;text-align:center;transition:all .3s}
+.how-step:hover{border-color:rgba(118,210,21,.25);transform:translateY(-4px)}
+.how-num{width:52px;height:52px;border-radius:50%;background:rgba(118,210,21,.1);
+  border:2px solid rgba(118,210,21,.3);display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;font-family:var(--serif);font-size:1.2rem;font-weight:800;
+  color:var(--green);position:relative;z-index:1;transition:all .3s}
+.how-step:hover .how-num{background:rgba(118,210,21,.2);border-color:var(--green);box-shadow:0 0 20px rgba(118,210,21,.3)}
+.how-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:12px}
+.how-text{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.7;font-weight:400}
+.how-time{margin-top:14px;font-size:.78rem;font-weight:600;color:var(--green);letter-spacing:.08em;text-transform:uppercase}
+
+/* ── QUOTE ── */
+.quote-section{background:var(--green);padding:72px 60px;text-align:center;position:relative;overflow:hidden}
+.quote-section::before{content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(0,0,0,.03) 20px,rgba(0,0,0,.03) 21px)}
+.quote-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.quote-photo{width:56px;height:56px;border-radius:50%;overflow:hidden;border:2px solid rgba(0,0,0,.15);flex-shrink:0}
+.quote-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.quote-text-wrap{text-align:left}
+.quote-text{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.7rem);font-weight:700;
+  color:var(--black);line-height:1.35;max-width:720px;margin-bottom:10px}
+.quote-author{font-size:.88rem;color:rgba(0,0,0,.55);font-weight:500}
+
+/* ── TEAM ── */
+.team{background:var(--black-deep);padding:100px 60px}
+.team-head{text-align:center;max-width:540px;margin:0 auto 60px}
+.team-head h2{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;
+  color:var(--white);letter-spacing:-.02em;line-height:1.1;margin-bottom:14px}
+.team-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;max-width:1200px;margin:0 auto}
+.team-card{background:var(--black-mid);border:1px solid rgba(255,255,255,.06);
+  padding:40px 28px;text-align:center;transition:all .3s}
+.team-card:hover{border-color:rgba(118,210,21,.25);transform:translateY(-4px)}
+.team-avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 22px;overflow:hidden}
+.team-avatar.photo{border:2px solid var(--green)}
+.team-avatar.initials{background:rgba(118,210,21,.1);border:2px solid rgba(118,210,21,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:1.7rem;font-weight:800;color:var(--green)}
+.team-name{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:4px}
+.team-role{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--green);margin-bottom:14px}
+.team-desc{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:400}
+
+/* ── CTA ── */
+.cta-section{background:var(--black-mid);padding:100px 60px}
+.cta-inner{background:var(--black-deep);border:1px solid rgba(118,210,21,.15);border-radius:6px;
+  padding:80px;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;
+  position:relative;overflow:hidden;max-width:1100px;margin:0 auto}
+.cta-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--green),var(--neon),transparent)}
+.cta-title{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:800;
+  color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:18px}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:460px}
+.cta-box{display:flex;flex-direction:column;gap:12px;flex-shrink:0;min-width:210px;text-align:center}
+.cta-note{font-size:.8rem;color:rgba(255,255,255,.45);margin-top:4px}
+
+/* ── FOOTER ── */
+footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.12);
+  padding:44px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo{font-family:var(--serif);font-size:1.3rem;font-weight:800;color:var(--white);letter-spacing:-.02em;text-decoration:none}
+.footer-logo span{color:var(--green)}
+.footer-claim{font-size:.8rem;color:rgba(255,255,255,.45);letter-spacing:.06em;margin-top:5px}
+.footer-links{display:flex;gap:28px;list-style:none}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:.82rem;color:rgba(255,255,255,.4)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .audience-grid,.how-steps,.team-grid,.usp-grid{grid-template-columns:1fr 1fr}
+  .how-steps::before{display:none}
+  .cta-inner{grid-template-columns:1fr;padding:52px 40px}
+}
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{padding:110px 20px 70px;min-height:auto}
+  .audience,.how,.team,.cta-section,.usp-bar{padding:70px 20px}
+  .quote-section{padding:60px 20px}
+  .audience-grid,.how-steps,.team-grid,.usp-grid{grid-template-columns:1fr}
+  .hero-stats{gap:28px}
+  footer{flex-direction:column;padding:36px 20px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+  .cta-inner{padding:40px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">di<span>prom</span></a>
+  <ul class="nav-links">
+    <li><a href="diprom-eigentuemer.html">Eigentümer & WEG</a></li>
+    <li><a href="diprom-skalierung.html">Hausverwaltungen</a></li>
+    <li><a href="diprom-kontakt.html" class="nav-cta">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="eyebrow" style="animation:fadeUp .5s ease both">Hausverwaltung neu gedacht</div>
+    <h1>Digital wo möglich.<br><span class="accent">Persönlich</span> wo nötig.</h1>
+    <p class="hero-sub">diprom verbindet KI-gestützte Prozessautomatisierung mit echter persönlicher Betreuung. Für Eigentümer, die Transparenz verdienen. Für Verwaltungen, die wachsen wollen.</p>
+    <div class="hero-actions">
+      <a href="diprom-eigentuemer.html" class="btn-primary">Für Eigentümer & WEG</a>
+      <a href="diprom-skalierung.html" class="btn-ghost">Für Hausverwaltungen</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">85%</div>
+        <div class="hero-stat-label">Anfragen beantwortet<br>in unter 1 Stunde</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div>
+        <div class="hero-stat-num">2×</div>
+        <div class="hero-stat-label">Wöchentliche Status-<br>Updates pro Vorgang</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Transparenz im<br>Eigentümerportal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience">
+  <div class="audience-head reveal">
+    <div class="eyebrow center">Für wen ist diprom?</div>
+    <h2>Drei Zielgruppen.<br>Eine Plattform.</h2>
+    <p>diprom löst die konkreten Probleme von Eigentümern, wachsenden Verwaltungen und Unternehmern auf der Suche nach einem Nachfolger.</p>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-card reveal" onclick="location.href='diprom-eigentuemer.html'" style="cursor:pointer">
+      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/><path d="M3 12v9h18V12"/></svg></span></div>
+      <div class="audience-title">Eigentümer & WEG</div>
+      <p class="audience-text">Sie suchen eine Verwaltung, die wirklich erreichbar ist – und auch dann kommuniziert, wenn sich gerade nichts verändert hat.</p>
+      <div class="audience-link">Mehr erfahren →</div>
+    </div>
+    <div class="audience-card featured reveal d1" onclick="location.href='diprom-skalierung.html'" style="cursor:pointer">
+      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span></div>
+      <div class="audience-title">Hausverwaltungen</div>
+      <p class="audience-text">Ihr Backoffice bremst Ihr Wachstum. diprom liefert die komplette Betriebsinfrastruktur – Sie wachsen, wir skalieren mit.</p>
+      <div class="audience-link">Mehr erfahren →</div>
+    </div>
+    <div class="audience-card reveal d2" onclick="location.href='diprom-kontakt.html'" style="cursor:pointer">
+      <div style="margin-bottom:20px;color:var(--green)"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l8.42 8.42 8.42-8.42a5.4 5.4 0 0 0 0-7.65z"/></svg></span></div>
+      <div class="audience-title">Nachfolge</div>
+      <p class="audience-text">Sie suchen einen verlässlichen Nachfolger für Ihre Hausverwaltung? diprom übernimmt Bestand und Kunden – professionell und wertschätzend.</p>
+      <div class="audience-link">Gespräch anfragen →</div>
+    </div>
+  </div>
+</section>
+
+<!-- USP BAR -->
+<div class="usp-bar">
+  <div class="usp-grid">
+    <div class="usp-item reveal">
+      <div class="usp-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span></div>
+      <div>
+        <div class="usp-title">KI-gestützte Reaktionszeit</div>
+        <p class="usp-text">85% aller Anfragen beantwortet in unter einer Stunde – weil KI vorbereitet und Menschen freigeben.</p>
+      </div>
+    </div>
+    <div class="usp-item reveal d1">
+      <div class="usp-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="24" height="24" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span></div>
+      <div>
+        <div class="usp-title">Komplette Plattform</div>
+        <p class="usp-text">Frontend, Abrechnungen, Checklisten, Kommunikation – alles aus einer Hand. Keine Lizenzkosten.</p>
+      </div>
+    </div>
+    <div class="usp-item reveal d2">
+      <div class="usp-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div>
+      <div>
+        <div class="usp-title">DSGVO by Design</div>
+        <p class="usp-text">Softwarerecht fest im Team verankert. Datenschutz ist keine Checkliste, sondern Grundarchitektur.</p>
+      </div>
+    </div>
+    <div class="usp-item reveal d3">
+      <div class="usp-icon"><span style="display:inline-flex;align-items:center;color:var(--green)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span></div>
+      <div>
+        <div class="usp-title">Volle Transparenz</div>
+        <p class="usp-text">Eigentümerportal mit Echtzeit-Status. Keine offenen Fragen, keine Informationslücken.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="how-head reveal">
+    <div class="eyebrow center">So funktioniert diprom</div>
+    <h2>Einfach anfangen.</h2>
+    <p>Vom ersten Gespräch bis zum laufenden Betrieb – klar strukturiert, ohne Überraschungen.</p>
+  </div>
+  <div class="how-steps">
+    <div class="how-step reveal">
+      <div class="how-num">1</div>
+      <div class="how-title">Kostenloses Erstgespräch</div>
+      <p class="how-text">Wir schauen uns Ihre Situation an – ohne Skript, ohne Pitch. Am Ende wissen beide Seiten, ob es passt.</p>
+      <div class="how-time">Ca. 30–45 Min.</div>
+    </div>
+    <div class="how-step reveal d1">
+      <div class="how-num">2</div>
+      <div class="how-title">Analyse & Angebot</div>
+      <p class="how-text">diprom analysiert Ihre Prozesse und erstellt ein konkretes, transparentes Angebot – innerhalb von 5 Werktagen.</p>
+      <div class="how-time">Bis zu 5 Werktage</div>
+    </div>
+    <div class="how-step reveal d2">
+      <div class="how-num">3</div>
+      <div class="how-title">Nahtloser Start</div>
+      <p class="how-text">Datenmigration, Prozess-Setup, Pilotbetrieb – alles übernimmt diprom. Ihr Team startet ohne Chaos.</p>
+      <div class="how-time">Ab Woche 6–8</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section reveal">
+  <div class="quote-inner">
+    <div class="quote-photo">
+      <img src="data:image/jpeg;base64,data:image/jpeg;base64,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" alt="Sebastian">
+    </div>
+    <div class="quote-text-wrap">
+      <div class="quote-text">"Gute Verwaltung bedeutet nicht, Probleme zu lösen. Es bedeutet, dass niemand das Gefühl bekommt, eines zu haben."</div>
+      <div class="quote-author">Sebastian – Gründer & CEO, diprom</div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="team-head reveal">
+    <div class="eyebrow center">Das Team</div>
+    <h2>Vier Experten.<br>Eine Mission.</h2>
+    <p>Verwaltung. Finanzen. Recht. Menschen. Die Kombination macht den Unterschied.</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-avatar photo">
+        <img src="data:image/jpeg;base64,data:image/jpeg;base64,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" alt="Sebastian" style="width:100%;height:100%;object-fit:cover;object-position:center 15%">
+      </div>
+      <div class="team-name">Sebastian</div>
+      <div class="team-role">CEO · RPA & KI</div>
+      <p class="team-desc">Automatisierungsexperte mit Fokus auf KI-gestützte Verwaltungsprozesse.</p>
+    </div>
+    <div class="team-card reveal d1">
+      <div class="team-avatar initials">M</div>
+      <div class="team-name">Matthias</div>
+      <div class="team-role">Finance & Controlling</div>
+      <p class="team-desc">Finanzprofi mit Erfahrung in der Hausverwaltungs-Buchführung.</p>
+    </div>
+    <div class="team-card reveal d2">
+      <div class="team-avatar initials">S</div>
+      <div class="team-name">Stephan</div>
+      <div class="team-role">Legal · DSGVO</div>
+      <p class="team-desc">Softwarerecht und Datenschutz – fest im Team, nicht zugekauft.</p>
+    </div>
+    <div class="team-card reveal d3">
+      <div class="team-avatar initials">N</div>
+      <div class="team-name">Natalie</div>
+      <div class="team-role">HR & Organisation</div>
+      <p class="team-desc">Sorgt dafür, dass Menschen und Prozesse zusammenpassen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <div>
+      <div class="eyebrow">Kostenloses Erstgespräch</div>
+      <div class="cta-title">Bereit für den<br>nächsten Schritt?</div>
+      <p class="cta-sub">Ob Eigentümer, Verwaltung oder Nachfolge – wir schauen uns Ihre Situation an und zeigen konkret, was diprom für Sie bedeutet. Kein Pitch. Echte Analyse.</p>
+    </div>
+    <div class="cta-box">
+      <a href="diprom-kontakt.html" class="btn-primary">Jetzt Kontakt aufnehmen</a>
+      <p class="cta-note">Kostenfrei · Unverbindlich · Vertraulich</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="#" class="footer-logo">di<span>prom</span></a>
+    <div class="footer-claim">Digital wo möglich. Persönlich wo nötig.</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="diprom-impressum.html">Impressum</a></li>
+    <li><a href="diprom-datenschutz.html">Datenschutz</a></li>
+    <li><a href="diprom-kontakt.html">Kontakt</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 diprom GmbH · Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.07, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
