@@ -184,17 +184,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:68px;
 .team-head p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8}
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;max-width:1200px;margin:0 auto}
 .team-card{background:var(--black-mid);border:1px solid rgba(255,255,255,.06);
-  padding:40px 28px;text-align:center;transition:all .3s}
-.team-card:hover{border-color:rgba(118,210,21,.25);transform:translateY(-4px)}
-.team-avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 22px;overflow:hidden}
-.team-avatar.photo{border:2px solid var(--green)}
-.team-avatar.initials{background:rgba(118,210,21,.1);border:2px solid rgba(118,210,21,.3);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-size:1.7rem;font-weight:800;color:var(--green)}
-.team-name{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:4px}
-.team-role{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--green);margin-bottom:14px}
-.team-desc{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:400}
+  display:flex;flex-direction:column;justify-content:space-between;transition:all .3s;overflow:hidden}
+.team-card:hover{border-color:rgba(118,210,21,.2)}
+.team-card-top{padding:36px 32px 28px}
+.team-name{font-family:var(--serif);font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:4px;letter-spacing:-.02em}
+.team-role{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:18px;font-weight:400}
+.team-desc{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.7;font-weight:400}
+.team-photo-bottom{height:220px;overflow:hidden}
+.team-photo-bottom img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.team-photo-empty{height:220px;background:rgba(0,0,0,.25)}
 
 /* ── CTA ── */
 .cta-section{background:var(--black-mid);padding:100px 60px}
@@ -269,9 +267,6 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
 .hero-audience-links a:hover{color:var(--green)}
 .hero-aud-divider{width:1px;height:14px;background:rgba(255,255,255,.15)}
 
-/* Team avatar icons */
-.team-avatar-icon{width:76px;height:76px;border-radius:50%;margin:0 auto 22px;background:rgba(118,210,21,.08);border:2px solid rgba(118,210,21,.25);display:flex;align-items:center;justify-content:center}
-.team-since{font-size:.74rem;color:var(--green);font-weight:600;margin-top:12px;letter-spacing:.03em;opacity:.85}
 
 </style>
 </head>
@@ -473,44 +468,42 @@ nav{max-width:1600px;left:50%;transform:translateX(-50%);right:auto;width:100%}
   <div class="team-head reveal">
     <div class="eyebrow center">Das Team</div>
     <h2>Vier Menschen.<br>Eine gemeinsame Geschichte.</h2>
-    <p>Wir kennen uns seit Jahren – manche von uns seit Jahrzehnten. diprom ist kein Startup aus dem Nichts, sondern das Ergebnis langer gemeinsamer Erfahrung in Verwaltung, Finanzen, Recht und Menschen.</p>
+    <p>Wir kennen uns seit Jahren und haben diprom gemeinsam aufgebaut – weil wir glauben, dass gute Verwaltung vor allem eines braucht: verlässliche Menschen.</p>
   </div>
   <div class="team-grid">
     <div class="team-card reveal">
-      <div class="team-avatar-icon">
-        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <div class="team-card-top">
+        <div class="team-name">Sebastian</div>
+        <div class="team-role">CEO (KI & Automatisierung)</div>
+        <p class="team-desc">Prozesse, die sich wiederholen, sollten nicht von Menschen erledigt werden müssen. Daran arbeitet Sebastian – damit im Gegenzug mehr Zeit für das bleibt, was wirklich zählt.</p>
       </div>
-      <div class="team-name">Sebastian</div>
-      <div class="team-role">CEO · KI & Automatisierung</div>
-      <p class="team-desc">Sebastian hat schon mehr Prozesse automatisiert als die meisten je manuell erledigt hätten. Sein Antrieb: Verwaltung muss nicht kompliziert sein – sie wird es nur, wenn niemand hinschaut. Er schaut hin.</p>
-      <div class="team-since">Seit über 10 Jahren in der Branche</div>
+      <div class="team-photo-bottom">
+        <img src="sebastian.jpg" alt="Sebastian">
+      </div>
     </div>
     <div class="team-card reveal d1">
-      <div class="team-avatar-icon">
-        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <div class="team-card-top">
+        <div class="team-name">Mathias</div>
+        <div class="team-role">CFO (Finance & Controlling)</div>
+        <p class="team-desc">Zahlen erzählen eine Geschichte – man muss nur wissen, wie man liest. Mathias sorgt dafür, dass die Finanzen bei diprom und unseren Kunden immer transparent und nachvollziehbar bleiben.</p>
       </div>
-      <div class="team-name">Mathias</div>
-      <div class="team-role">CFO · Finance & Controlling</div>
-      <p class="team-desc">Mathias kennt Zahlen nicht nur – er versteht, was hinter ihnen steckt. Jahrelange Erfahrung in der Hausverwaltungsfinanzierung macht ihn zum ruhigen Anker, wenn es darauf ankommt. Kein Cent geht an ihm vorbei.</p>
-      <div class="team-since">Langjähriger Wegbegleiter von Sebastian</div>
+      <div class="team-photo-empty"></div>
     </div>
     <div class="team-card reveal d2">
-      <div class="team-avatar-icon">
-        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="team-card-top">
+        <div class="team-name">Stephan</div>
+        <div class="team-role">CIO (Softwarerecht & DSGVO)</div>
+        <p class="team-desc">Datenschutz ist kein Thema, das man am Ende draufschraubt. Stephan stellt sicher, dass es von Anfang an richtig gemacht wird – ohne Kompromisse, ohne Ausreden.</p>
       </div>
-      <div class="team-name">Stephan</div>
-      <div class="team-role">CIO · Softwarerecht & DSGVO</div>
-      <p class="team-desc">Stephan ist der, den man braucht, bevor man ihn braucht. Softwarerecht und Datenschutz sind bei ihm kein Beiwerk – sie sind von Anfang an eingebaut. Weil er gesehen hat, was passiert, wenn man das nachholt.</p>
-      <div class="team-since">Vertraut dem Team seit dem ersten Tag</div>
+      <div class="team-photo-empty"></div>
     </div>
     <div class="team-card reveal d3">
-      <div class="team-avatar-icon">
-        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="team-card-top">
+        <div class="team-name">Natalie</div>
+        <div class="team-role">CHRO (Personal & Organisation)</div>
+        <p class="team-desc">Ein gutes Team entsteht nicht durch Zufall. Natalie kümmert sich darum, dass die richtigen Menschen zusammenkommen – und dass sie gerne Teil von diprom sind.</p>
       </div>
-      <div class="team-name">Natalie</div>
-      <div class="team-role">CHRO · Personal & Organisation</div>
-      <p class="team-desc">Natalie sorgt dafür, dass die richtigen Menschen zur richtigen Zeit am richtigen Ort sind – und dass sie gerne dort sind. Sie weiß: Ein gutes Team baut man nicht in einer Woche. Sie hat Jahre investiert.</p>
-      <div class="team-since">Bringt Struktur, wo andere Chaos sehen</div>
+      <div class="team-photo-empty"></div>
     </div>
   </div>
 </section>
