@@ -932,15 +932,30 @@ footer{background:var(--black-deep);border-top:1px solid rgba(118,210,21,.1);pad
 
 <script>
 // ROI Calculator
+// Basis: DDIV Branchenbarometer 2025 – Ø 140 Einheiten/VZÄ (konventionell)
+// Zeitersparnis durch diprom-Automatisierung: 28% (konservative Schätzung)
 function calcRoi(units) {
   units = parseInt(units);
-  document.getElementById('units-val').textContent = units + ' Einheiten';
-  const hours = Math.round(units * 0.26);
-  const docs = Math.round(units * 2.1);
+  const hoursPerUnit = 160 / 140;               // 1,14 h/Einheit/Monat (DDIV-Basis)
+  const saving = 0.28;                           // 28% Zeitersparnis durch Automatisierung
+  const hours = Math.round(units * hoursPerUnit * saving);
   const fte = (hours / 160).toFixed(1);
+  const docs = Math.round(units * 2.1);
+  const addCapacity = Math.round(parseFloat(fte) * 140); // FTE-Ersparnis × DDIV-Normquote
+
+  document.getElementById('units-val').textContent = units.toLocaleString('de-DE') + ' Einheiten';
   document.getElementById('roi-hours').textContent = hours;
   document.getElementById('roi-docs').textContent = docs;
   document.getElementById('roi-fte').textContent = fte;
+
+  // Wachstumseffekt-Box synchronisieren
+  const geUnits = document.getElementById('ge-units');
+  if (geUnits) {
+    geUnits.textContent = units.toLocaleString('de-DE');
+    document.getElementById('ge-hours').textContent = hours;
+    document.getElementById('ge-capacity').textContent = '+' + addCapacity;
+    document.getElementById('ge-cost').textContent = fte;
+  }
 }
 
 // Scroll reveal

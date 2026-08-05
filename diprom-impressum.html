@@ -5,6 +5,8 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Impressum – diprom GmbH</title>
+<meta name="description" content="Impressum der diprom GmbH i. G., Reichweinstraße 20, 47441 Moers. Angaben gemäß § 5 DDG.">
+<link rel="canonical" href="https://www.diprom.io/impressum">
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -34,12 +36,26 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
 .footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:var(--green)}
 .footer-copy{font-size:.82rem;color:rgba(255,255,255,.4)}
-@media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.page-content{padding:100px 20px 60px}footer{flex-direction:column;padding:36px 20px;text-align:center}}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none;z-index:1001}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(11,15,20,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;transition:color .2s}
+.mobile-menu a:hover{color:var(--green)}
+.mobile-menu .nav-cta{background:var(--green);color:var(--black)!important;padding:14px 32px;border-radius:3px}
+@media(max-width:768px){.hamburger{display:flex}}
+
+@media(max-width:768px){.nav-links{display:none};nav{padding:0 20px}.page-content{padding:100px 20px 60px}footer{flex-direction:column;padding:36px 20px;text-align:center}}
 </style>
 </head>
 <body>
 <nav>
   <a href="index.html" class="nav-logo">di<span>prom</span></a>
+  <button class="hamburger" aria-label="Menü" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li><a href="index.html">Startseite</a></li>
     <li><a href="diprom-eigentuemer.html">Eigentümer & WEG</a></li>
@@ -48,13 +64,20 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
     <li><a href="diprom-kontakt.html" class="nav-cta">Kontakt</a></li>
   </ul>
 </nav>
+<div class="mobile-menu">
+  <a href="index.html" onclick="toggleMenu()">Startseite</a>
+  <a href="diprom-eigentuemer.html" onclick="toggleMenu()">Eigentümer & WEG</a>
+  <a href="diprom-skalierung.html" onclick="toggleMenu()">Hausverwaltungen</a>
+  <a href="diprom-nachfolge.html" onclick="toggleMenu()">Nachfolge</a>
+  <a href="diprom-kontakt.html" class="nav-cta" onclick="toggleMenu()">Kontakt</a>
+</div>
 <div class="page-content">
   <span class="eyebrow">Rechtliches</span>
   <h1>Impressum</h1>
-  <p>Angaben gemäß § 5 TMG</p>
+  <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
 
   <h2>Unternehmen</h2>
-  <p>diprom GmbH<br>
+  <p>diprom GmbH i. G.<br>
   Reichweinstraße 20<br>
   47441 Moers, Deutschland</p>
 
@@ -76,7 +99,7 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
 
   <h2>Haftungsausschluss</h2>
   <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
-  <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+  <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
 </div>
 <footer>
   <div>
@@ -90,5 +113,9 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
   </ul>
   <p class="footer-copy">© 2025 diprom GmbH · Alle Rechte vorbehalten</p>
 </footer>
+<script>
+function toggleMenu(){var h=document.querySelector('.hamburger'),m=document.querySelector('.mobile-menu');h.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var h=document.querySelector('.hamburger'),m=document.querySelector('.mobile-menu');if(m&&m.classList.contains('open')){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';}}});
+</script>
 </body>
 </html>
