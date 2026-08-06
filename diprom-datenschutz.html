@@ -8,29 +8,35 @@
 <meta name="description" content="Datenschutzerklärung der diprom GmbH i. G. – Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.">
 <link rel="canonical" href="https://www.diprom.io/datenschutz">
 <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css?family=inter:400,500,600|montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
 <style>
-:root{--green:#76D215;--neon:#C7FE0B;--black:#0B0F14;--black-mid:#111820;--white:#FFFFFF;--serif:'Syne',sans-serif;--font:'Inter',sans-serif}
+:root{
+  --ink:#1A1A1A;--structure:#F4F6F8;--line:#E6E6E6;
+  --slate:#333333;--muted:#6B7280;
+  --green:#76D215;--white:#FFFFFF;
+  --font-head:'Montserrat',Arial,sans-serif;
+  --font-body:'Inter',Arial,sans-serif;
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--black);color:var(--white);overflow-x:hidden;max-width:1600px;margin:0 auto}
+body{font-family:var(--font-body);background:var(--ink);color:var(--white);overflow-x:hidden;max-width:1600px;margin:0 auto}
 nav{position:fixed;top:0;left:50%;transform:translateX(-50%);right:auto;width:100%;max-width:1600px;z-index:200;padding:0 60px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(11,15,20,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(118,210,21,.15)}
-.nav-logo{font-family:var(--serif);font-size:1.5rem;font-weight:800;color:var(--white);letter-spacing:-.02em;text-decoration:none}
-.nav-logo span{color:var(--green)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+
 .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
 .nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--green)}
-.nav-cta{background:var(--green)!important;color:var(--black)!important;padding:9px 22px;border-radius:3px;font-weight:700!important}
+.nav-cta{background:var(--green)!important;color:var(--ink)!important;padding:9px 22px;border-radius:3px;font-weight:700!important}
 .page-content{max-width:780px;margin:0 auto;padding:120px 60px 100px}
-h1{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--white);margin-bottom:12px;letter-spacing:-.02em}
-h2{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--white);margin:36px 0 10px}
+h1{font-family:var(--font-head);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--white);margin-bottom:12px;letter-spacing:-.02em}
+h2{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--white);margin:36px 0 10px}
 p{color:rgba(255,255,255,.65);line-height:1.8;font-size:.95rem;margin-bottom:14px}
 a{color:var(--green);text-decoration:none}
 a:hover{text-decoration:underline}
 .eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:block}
-footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding:44px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
-.footer-logo{font-family:var(--serif);font-size:1.3rem;font-weight:800;color:var(--white);letter-spacing:-.02em;text-decoration:none}
-.footer-logo span{color:var(--green)}
+footer{background:var(--ink);border-top:1px solid rgba(118,210,21,.12);padding:44px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo{display:flex;align-items:center;text-decoration:none}
+
 .footer-claim{font-size:.8rem;color:rgba(255,255,255,.45);margin-top:5px}
 .footer-links{display:flex;gap:28px;list-style:none}
 .footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
@@ -44,9 +50,9 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(11,15,20,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;transition:color .2s}
+.mobile-menu a{font-family:var(--font-head);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;transition:color .2s}
 .mobile-menu a:hover{color:var(--green)}
-.mobile-menu .nav-cta{background:var(--green);color:var(--black)!important;padding:14px 32px;border-radius:3px}
+.mobile-menu .nav-cta{background:var(--green);color:var(--ink)!important;padding:14px 32px;border-radius:3px}
 @media(max-width:768px){.hamburger{display:flex}}
 
 @media(max-width:768px){.nav-links{display:none}nav{padding:0 20px}.page-content{padding:100px 20px 60px}footer{flex-direction:column;padding:36px 20px;text-align:center}}
@@ -54,7 +60,7 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo">di<span>prom</span></a>
+  <a href="index.html" class="nav-logo"><img src="images/diprom-logo-ohne-claim-farbe.svg" alt="diprom" height="36"></a>
   <button class="hamburger" aria-label="Menü" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li><a href="index.html">Startseite</a></li>
@@ -101,7 +107,7 @@ footer{background:var(--black);border-top:1px solid rgba(118,210,21,.12);padding
 </div>
 <footer>
   <div>
-    <a href="index.html" class="footer-logo">di<span>prom</span></a>
+    <a href="index.html" class="footer-logo"><img src="images/diprom-logo-ohne-claim-invers.svg" alt="diprom" height="28"></a>
     <div class="footer-claim">Digital wo möglich. Persönlich wo nötig.</div>
   </div>
   <ul class="footer-links">
