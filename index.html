@@ -261,8 +261,156 @@
     }
 
     .zielgruppen-icon {
-      font-size: 40px;
+      width: 50px;
+      height: 50px;
       margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .zielgruppen-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--green);
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    /* USP BAR */
+    .usp-section {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 60px 20px;
+    }
+
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .usp-item {
+      text-align: center;
+    }
+
+    .usp-item-icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .usp-item h4 {
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .usp-item p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* HOW IT WORKS */
+    .how-section {
+      background: var(--structure);
+      padding: 80px 20px;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .how-step {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .how-step:hover {
+      border-color: var(--green);
+      transform: translateY(-5px);
+    }
+
+    .how-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(118, 210, 21, 0.1);
+      border: 2px solid var(--green);
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--green);
+      margin: 0 auto 20px;
+    }
+
+    .how-step h4 {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .how-step p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .how-step-time {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* QUOTE SECTION */
+    .quote-section {
+      background: var(--green);
+      color: var(--ink);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .quote-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .quote-text {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .quote-author {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(26, 26, 26, 0.8);
     }
 
     .zielgruppen-card h3 {
@@ -765,6 +913,24 @@
     </div>
   </div>
 
+  <!-- STATS BAR -->
+  <section style="background: var(--white); padding: 50px 20px; border-bottom: 1px solid var(--line);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center;">
+      <div>
+        <div style="font-family: var(--font-head); font-size: 32px; font-weight: 700; color: var(--green); margin-bottom: 8px;">85%</div>
+        <div style="font-size: 14px; color: var(--muted); line-height: 1.6;">Anfragen beantwortet<br>in unter 1 Stunde</div>
+      </div>
+      <div>
+        <div style="font-family: var(--font-head); font-size: 32px; font-weight: 700; color: var(--green); margin-bottom: 8px;">2×</div>
+        <div style="font-size: 14px; color: var(--muted); line-height: 1.6;">Wöchentliche Status-<br>Updates pro Vorgang</div>
+      </div>
+      <div>
+        <div style="font-family: var(--font-head); font-size: 32px; font-weight: 700; color: var(--green); margin-bottom: 8px;">100%</div>
+        <div style="font-size: 14px; color: var(--muted); line-height: 1.6;">Transparenz im<br>Eigentümerportal</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ZIELGRUPPEN -->
   <section class="zielgruppen" id="zielgruppen">
     <div class="container">
@@ -773,17 +939,33 @@
 
       <div class="zielgruppen-grid">
         <div class="zielgruppen-card">
-          <div class="zielgruppen-icon">🏢</div>
+          <div class="zielgruppen-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9h18v12H3z"/>
+              <path d="M12 3v6"/>
+              <path d="M6 9V5h12v4"/>
+            </svg>
+          </div>
           <h3>Unternehmensinhaber</h3>
           <p>Sie verwalten mehrere Liegenschaften und wollen weniger Zeit in Buchhaltung investieren.</p>
         </div>
         <div class="zielgruppen-card">
-          <div class="zielgruppen-icon">👔</div>
+          <div class="zielgruppen-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
           <h3>Freiberufler</h3>
           <p>Anwälte, Steuerberater, Immobilienmakler mit Verwaltungsaufgaben – alles zentral organisiert.</p>
         </div>
         <div class="zielgruppen-card">
-          <div class="zielgruppen-icon">🏠</div>
+          <div class="zielgruppen-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 20V8l9-5 9 5v12H3z"/>
+              <path d="M9 20v-5h6v5"/>
+            </svg>
+          </div>
           <h3>WEG-Selbstverwalter</h3>
           <p>Eigentumsgemeinschaften ohne Profiverwaltung – diprom macht die Abrechnung zum Kinderspiel.</p>
         </div>
@@ -817,6 +999,64 @@
             <li>Jahresabrechnung in Tagen, nicht Wochen</li>
             <li>Direkte Kommunikation über das Portal</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP BAR - Warum diprom -->
+  <section class="usp-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 50px;">Warum diprom?</h2>
+      <div class="usp-grid">
+        <div class="usp-item">
+          <div class="usp-item-icon">⚡</div>
+          <h4>KI-gestützte Reaktionszeit</h4>
+          <p>85% aller Anfragen beantwortet in unter einer Stunde – weil KI vorbereitet und Menschen freigeben.</p>
+        </div>
+        <div class="usp-item">
+          <div class="usp-item-icon">🔧</div>
+          <h4>Komplette Plattform</h4>
+          <p>Frontend, Abrechnungen, Checklisten, Kommunikation – alles aus einer Hand. Keine Lizenzkosten.</p>
+        </div>
+        <div class="usp-item">
+          <div class="usp-item-icon">🛡️</div>
+          <h4>DSGVO by Design</h4>
+          <p>Softwarerecht fest im Team verankert. Datenschutz ist keine Checkliste, sondern Grundarchitektur.</p>
+        </div>
+        <div class="usp-item">
+          <div class="usp-item-icon">👁️</div>
+          <h4>Volle Transparenz</h4>
+          <p>Eigentümerportal mit Echtzeit-Status. Keine offenen Fragen, keine Informationslücken.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="container">
+      <h2 style="text-align: center;">So funktioniert diprom</h2>
+      <p class="section-sub" style="text-align: center;">Vom ersten Gespräch bis zum laufenden Betrieb – klar strukturiert, ohne Überraschungen.</p>
+
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <h4>Kostenloses Erstgespräch</h4>
+          <p>Wir schauen uns Ihre Situation an – ohne Skript, ohne Pitch. Am Ende wissen beide Seiten, ob es passt.</p>
+          <div class="how-step-time">Ca. 30–45 Min.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <h4>Analyse & Angebot</h4>
+          <p>diprom analysiert Ihre Prozesse und erstellt ein konkretes, transparentes Angebot – innerhalb von 5 Werktagen.</p>
+          <div class="how-step-time">Bis zu 5 Werktage</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <h4>Nahtloser Start</h4>
+          <p>Datenmigration, Prozess-Setup, Pilotbetrieb – alles übernimmt diprom. Ihr Team startet ohne Chaos.</p>
+          <div class="how-step-time">Ab Woche 6–8</div>
         </div>
       </div>
     </div>
@@ -899,53 +1139,67 @@
       <div class="pricing-grid">
         <div class="pricing-card">
           <h3>Basis</h3>
-          <div class="pricing-price">€15<span class="pricing-price-sub">/Einheit/Monat</span></div>
+          <div class="pricing-price">€7,50<span class="pricing-price-sub">/Einheit/Monat</span></div>
           <ul class="pricing-features">
             <li>Wirtschaftsplan</li>
             <li>Jahresabrechnung</li>
             <li>BuHa-Datenexport</li>
             <li>IBAN-Betrug-Prüfung</li>
           </ul>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">+ €2,50/Stellplatz/Monat</p>
           <a href="#contact" class="btn btn-secondary" style="width: 100%;">Anfragen</a>
         </div>
 
         <div class="pricing-card featured">
           <div class="pricing-badge">Empfohlen</div>
           <h3>Proaktiv</h3>
-          <div class="pricing-price">€25<span class="pricing-price-sub">/Einheit/Monat</span></div>
+          <div class="pricing-price">€9,50<span class="pricing-price-sub">/Einheit/Monat</span></div>
           <ul class="pricing-features">
             <li>Alles aus Basis</li>
             <li>Rechnungsverarbeitung</li>
-            <li>Optional: Schaden-Support</li>
-            <li>Monatliche Berichte</li>
+            <li>Versicherungsschaden-Koordination</li>
+            <li>Reparaturkoordination</li>
+            <li>Mieterkommunikation</li>
           </ul>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">+ €2,50/Stellplatz/Monat<br>+ 4% für optional genutzte Leistungen</p>
           <a href="#contact" class="btn btn-primary" style="width: 100%;">Demo buchen</a>
         </div>
 
         <div class="pricing-card">
           <h3>Connected</h3>
-          <div class="pricing-price">€40<span class="pricing-price-sub">/Einheit/Monat</span></div>
+          <div class="pricing-price">€9,50<span class="pricing-price-sub">/Einheit/Monat</span></div>
           <ul class="pricing-features">
             <li>Alles aus Proaktiv</li>
-            <li>Mieterkommunikation</li>
-            <li>Wohnungs-Verwaltung</li>
-            <li>API-Anbindung</li>
+            <li>Vollständige Mieterkommunikation</li>
+            <li>Abrechnung an Mieter verteilen</li>
+            <li>Neuvermietung Support</li>
+            <li>Priorität-Support</li>
           </ul>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">+ €2,50/Stellplatz/Monat<br>+ 4% für optional genutzte Leistungen</p>
           <a href="#contact" class="btn btn-secondary" style="width: 100%;">Anfragen</a>
         </div>
 
         <div class="pricing-card">
           <h3>Expert</h3>
-          <div class="pricing-price">Individuell<span class="pricing-price-sub">/ab 1.000 Einheiten</span></div>
+          <div class="pricing-price">Individuell<span class="pricing-price-sub">/ab ~100–200 Einheiten</span></div>
           <ul class="pricing-features">
-            <li>Vollständige Custom-Lösung</li>
-            <li>Dedicated Support</li>
+            <li>Maßgeschneidertes Angebot</li>
+            <li>Dedicated Account Manager</li>
             <li>White-Label möglich</li>
             <li>SLA-Garantie</li>
           </ul>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">Kontaktieren Sie uns für ein Angebot</p>
           <a href="#contact" class="btn btn-secondary" style="width: 100%;">Anfragen</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="quote-inner">
+      <div class="quote-text">"Gute Verwaltung bedeutet nicht, Probleme zu lösen. Es bedeutet, dass niemand das Gefühl bekommt, eines zu haben."</div>
+      <div class="quote-author">Sebastian – Gründer, diprom</div>
     </div>
   </section>
 
@@ -959,20 +1213,20 @@
         <div class="team-card">
           <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23ddd' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='40' fill='%23999'%3ES%3C/text%3E%3C/svg%3E" alt="Sebastian" class="team-photo">
           <h3>Sebastian</h3>
-          <div class="role">CEO · Gründer</div>
-          <p>KI & Automatisierung im Fokus. Verwandelt Prozesse in Lösungen.</p>
+          <div class="role">Vertrieb & Marketing</div>
+          <p>Kundenbeziehungen & Wachstum. Bringt diprom zu den richtigen Menschen.</p>
         </div>
         <div class="team-card">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23ddd' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='40' fill='%23999'%3EM%3C/text%3E%3C/svg%3E" alt="Matthias" class="team-photo">
-          <h3>Matthias</h3>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23ddd' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='40' fill='%23999'%3EM%3C/text%3E%3C/svg%3E" alt="Mathias" class="team-photo">
+          <h3>Mathias</h3>
           <div class="role">Finance & Controlling</div>
           <p>Buchhaltungs-Experte. Sorgt für Präzision und Transparenz.</p>
         </div>
         <div class="team-card">
           <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23ddd' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='40' fill='%23999'%3EST%3C/text%3E%3C/svg%3E" alt="Stephan" class="team-photo">
           <h3>Stephan</h3>
-          <div class="role">Legal & DSGVO</div>
-          <p>Datenschutz ist nicht optional. Fest im Team, nicht zugekauft.</p>
+          <div class="role">Entwicklung & Legal</div>
+          <p>Softwarerecht und Technologie – fest im Team, nicht zugekauft.</p>
         </div>
         <div class="team-card">
           <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23ddd' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='40' fill='%23999'%3EN%3C/text%3E%3C/svg%3E" alt="Natalie" class="team-photo">
@@ -1041,11 +1295,12 @@
   <script>
     // Preisrechner
     const prices = {
-      basis: 15,
-      proaktiv: 25,
-      connected: 40,
+      basis: 7.50,
+      proaktiv: 9.50,
+      connected: 9.50,
       expert: 0 // Expert ist individuell
     };
+    const stellplatzPrice = 2.50;
 
     function calculatePrice() {
       const units = parseInt(document.getElementById('unitCount').value) || 1;
