@@ -120,10 +120,6 @@
     /* HERO */
     .hero {
       margin-top: 70px;
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/office-lobby.png') center/cover;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
       padding: 100px 20px;
       text-align: center;
       min-height: 80vh;
@@ -136,19 +132,34 @@
 
     .hero::before {
       content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('images/office-lobby.png') center/cover fixed;
+      background-attachment: fixed;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at top right, rgba(118, 210, 21, 0.15) 0%, transparent 60%);
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                  radial-gradient(circle at top right, rgba(118, 210, 21, 0.15) 0%, transparent 60%);
+      z-index: 1;
       pointer-events: none;
     }
 
     .hero-inner {
       max-width: 800px;
       position: relative;
-      z-index: 2;
+      z-index: 10;
     }
 
     .hero h1 {
