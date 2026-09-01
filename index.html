@@ -120,7 +120,10 @@
     /* HERO */
     .hero {
       margin-top: 70px;
-      background: linear-gradient(135deg, var(--white) 0%, var(--structure) 100%);
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/office-lobby.png') center/cover;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
       padding: 100px 20px;
       text-align: center;
       min-height: 80vh;
@@ -134,12 +137,11 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(118, 210, 21, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at top right, rgba(118, 210, 21, 0.15) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -155,7 +157,8 @@
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 20px;
-      color: var(--ink);
+      color: var(--white);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .hero h1 .accent {
@@ -164,9 +167,10 @@
 
     .hero-sub {
       font-size: 18px;
-      color: var(--muted);
+      color: rgba(255, 255, 255, 0.9);
       margin-bottom: 40px;
       line-height: 1.8;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     .hero-ctas {
