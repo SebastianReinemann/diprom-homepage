@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Datenschutz – diprom GmbH</title>
+<meta name="description" content="Datenschutzerklärung der diprom GmbH i. G. – Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.">
+<link rel="canonical" href="https://www.diprom.io/datenschutz">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=inter:400,500,600|montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A1A;--structure:#F4F6F8;--line:#E6E6E6;
+  --slate:#333333;--muted:#6B7280;
+  --green:#76D215;--white:#FFFFFF;
+  --font-head:'Montserrat',Arial,sans-serif;
+  --font-body:'Inter',Arial,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--ink);color:var(--white);overflow-x:hidden;max-width:1600px;margin:0 auto}
+nav{position:fixed;top:0;left:50%;transform:translateX(-50%);right:auto;width:100%;max-width:1600px;z-index:200;padding:0 60px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(11,15,20,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(118,210,21,.15)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green)!important;color:var(--ink)!important;padding:9px 22px;border-radius:3px;font-weight:700!important}
+.page-content{max-width:780px;margin:0 auto;padding:120px 60px 100px}
+h1{font-family:var(--font-head);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;color:var(--white);margin-bottom:12px;letter-spacing:-.02em}
+h2{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--white);margin:36px 0 10px}
+p{color:rgba(255,255,255,.65);line-height:1.8;font-size:.95rem;margin-bottom:14px}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:block}
+footer{background:var(--ink);border-top:1px solid rgba(118,210,21,.12);padding:44px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo{display:flex;align-items:center;text-decoration:none}
+
+.footer-claim{font-size:.8rem;color:rgba(255,255,255,.45);margin-top:5px}
+.footer-links{display:flex;gap:28px;list-style:none}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:.82rem;color:rgba(255,255,255,.4)}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none;z-index:1001}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(11,15,20,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--font-head);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;transition:color .2s}
+.mobile-menu a:hover{color:var(--green)}
+.mobile-menu .nav-cta{background:var(--green);color:var(--ink)!important;padding:14px 32px;border-radius:3px}
+@media(max-width:768px){.hamburger{display:flex}}
+
+@media(max-width:768px){.nav-links{display:none}nav{padding:0 20px}.page-content{padding:100px 20px 60px}footer{flex-direction:column;padding:36px 20px;text-align:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/diprom-logo-ohne-claim-farbe.svg" alt="diprom" height="36"></a>
+  <button class="hamburger" aria-label="Menü" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="diprom-eigentuemer.html">Eigentümer & WEG</a></li>
+    <li><a href="diprom-skalierung.html">Hausverwaltungen</a></li>
+    <li><a href="diprom-nachfolge.html">Nachfolge</a></li>
+    <li><a href="diprom-kontakt.html" class="nav-cta">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html" onclick="toggleMenu()">Startseite</a>
+  <a href="diprom-eigentuemer.html" onclick="toggleMenu()">Eigentümer & WEG</a>
+  <a href="diprom-skalierung.html" onclick="toggleMenu()">Hausverwaltungen</a>
+  <a href="diprom-nachfolge.html" onclick="toggleMenu()">Nachfolge</a>
+  <a href="diprom-kontakt.html" class="nav-cta" onclick="toggleMenu()">Kontakt</a>
+</div>
+<div class="page-content">
+  <span class="eyebrow">Rechtliches</span>
+  <h1>Datenschutz&shy;erklärung</h1>
+  <p>Stand: Juni 2025</p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>diprom GmbH i. G.<br>
+  Moers, Deutschland<br>
+  E-Mail: <a href="mailto:info@diprom.io">info@diprom.io</a></p>
+
+  <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+  <p>Beim Besuch unserer Website werden durch den Browser automatisch Informationen an unseren Server übermittelt (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten). Diese Daten sind technisch notwendig und werden nicht mit anderen Daten zusammengeführt.</p>
+
+  <h2>3. Kontaktformular</h2>
+  <p>Wenn Sie uns über das Kontaktformular eine Nachricht senden, werden die angegebenen Daten (Name, E-Mail-Adresse, ggf. Telefonnummer und Nachricht) zur Bearbeitung der Anfrage bei uns gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+
+  <h2>4. Hosting</h2>
+  <p>Diese Website wird über GitHub Pages bereitgestellt (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Aufruf der Website werden technische Zugriffsdaten (u. a. IP-Adresse, Datum, Uhrzeit, aufgerufene Seiten) durch GitHub verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">github.com/privacy</a>.</p>
+  <p>Über das Kontaktformular eingehende Anfragen werden direkt an uns weitergeleitet und nicht dauerhaft auf externen Servern gespeichert.</p>
+
+  <h2>5. Ihre Rechte</h2>
+  <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Wenden Sie sich dazu an: <a href="mailto:info@diprom.io">info@diprom.io</a>.</p>
+  <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
+
+  <h2>6. Cookies</h2>
+  <p>Diese Website verwendet keine Tracking-Cookies oder Analytics-Dienste. Es werden ausschließlich technisch notwendige Funktionen eingesetzt.</p>
+</div>
+<footer>
+  <div>
+    <a href="index.html" class="footer-logo"><img src="images/diprom-logo-ohne-claim-invers.svg" alt="diprom" height="28"></a>
+    <div class="footer-claim">Digital wo möglich. Persönlich wo nötig.</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="diprom-impressum.html">Impressum</a></li>
+    <li><a href="diprom-datenschutz.html">Datenschutz</a></li>
+    <li><a href="diprom-kontakt.html">Kontakt</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 diprom GmbH · Alle Rechte vorbehalten</p>
+</footer>
+<script>
+function toggleMenu(){var h=document.querySelector('.hamburger'),m=document.querySelector('.mobile-menu');h.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var h=document.querySelector('.hamburger'),m=document.querySelector('.mobile-menu');if(m&&m.classList.contains('open')){h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';}}});
+</script>
+</body>
+</html>
