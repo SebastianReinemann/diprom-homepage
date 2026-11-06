@@ -1,0 +1,8 @@
+# Laufzeit-/Agent-Caches und Build-Artefakte – niemals committen
+.cache/
+.codex/
+codex-runtimes/
+node_modules/
+dist/
+.DS_Store
+*.log
